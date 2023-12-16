@@ -1,0 +1,28 @@
+---
+export interface Props {
+  id: string;
+  title: string;
+  css?: string;
+  estilo?: string;
+}
+
+const { title, id, css, estilo } = Astro.props;
+---
+
+<section
+  id={id}
+  class=`flex scroll-mt-32 flex-col items-center ${css}`
+>
+  <div class=`flex flex-col items-center gap-4 ${estilo}`>
+    <slot name="eyebrow" />
+    <h2 id="tup"
+      class="gradient-text text-center font-extrabold tracking-tight text-6xl mb-8"
+    >
+      {title}
+    </h2>
+  </div>
+  <p id="slot" class="max-w-xl text-center wr font-extrabold text-2xl text-wrap-balance">
+    <slot name="lead" />
+  </p>
+  <slot />
+</section>

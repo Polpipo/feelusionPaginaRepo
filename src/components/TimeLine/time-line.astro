@@ -1,0 +1,11 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import TimeLineTSX from "./time-line.tsx";
+---
+
+<ContentSection title="El paso a paso" id="paso-a-paso">
+  <Fragment slot="lead">
+    Creamos <span class="text-primary">momentos inolvidables</span>. Imagina, diseña y <span class="text-primary"><br>celebra con nosotros</span>.
+  </Fragment>
+  <TimeLineTSX client:only>
+</ContentSection>

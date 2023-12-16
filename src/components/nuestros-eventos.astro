@@ -1,0 +1,153 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import VideoEventoTengoUnPlan1 from "~/assets/eventos-feelusion/Evento_TengoUnPlan_PrimeraEdicion.mp4";
+import VideoEventoTengoUnPlan2 from "~/assets/eventos-feelusion/videoSegundaEdicion.mp4";
+import VideoExperienciaDavidTuru from "~/assets/eventos-feelusion/Experiencia_Paintball.mp4";
+---
+
+<ContentSection
+  title="Nuestros eventos"
+  id="nuestros-eventos"
+  estilo="lg:mt-16"
+>
+  <div class="h-full w-full text-center">
+    <!--<h3
+      class="text-center font-extrabold text-3xl hover:scale-110 duration-300"
+    >
+      <span class="text-primary">TENGO UN</span> PLAN
+    </h3>-->
+    <div class="h-full w-full mb-8 lg:my-0">
+      <div class="grid md:grid-cols-3 mt-0 md:mt-8 mb-8">
+        <div>
+          <h3
+            class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
+          >
+            Podcast en directo
+          </h3>
+          <video
+            id="evento-TUP1"
+            style="z-index: 10;"
+            class="w-2/3 mx-auto mt-8 mb-12 rounded-xl hover:scale-110 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] duration-300"
+            autoplay
+            controls
+            muted
+            preload="metadata"
+          >
+            <source src={VideoEventoTengoUnPlan1} type="video/mp4" />
+          </video>
+        </div>
+        <div>
+          <h3
+            class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
+          >
+            Eventos de alto impacto
+          </h3>
+          <video
+            id="evento-TUP2"
+            style="z-index: 10;"
+            class="w-2/3 mx-auto mt-8 mb-12 rounded-xl hover:scale-110 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] duration-300"
+            autoplay
+            controls
+            muted
+            preload="metadata"
+          >
+            <source src={VideoEventoTengoUnPlan2} type="video/mp4" />
+          </video>
+        </div>
+        <div>
+          <h3
+            class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
+          >
+            Experiencias
+          </h3>
+          <video
+            id="evento-DavidTuru"
+            style="z-index: 10;"
+            class="w-2/3 mx-auto mt-8 mb-12 rounded-xl hover:scale-110 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] duration-300"
+            autoplay
+            controls
+            muted
+            preload="metadata"
+          >
+            <source src={VideoExperienciaDavidTuru} type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfjYNuh1_sX66Bujs5HlaoJSuSMJ6kYkM2xcQqYA91WuP8u6A/viewform"
+      >
+        <button
+          class="rounded-full w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
+          >TRABAJA CON NOSOTROS</button
+        >
+      </a>
+    </div>
+  </div>
+</ContentSection>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    const videoTUP1 = document.getElementById("evento-TUP1");
+    const videoTUP2 = document.getElementById("evento-TUP2");
+    const videoDavidTuru = document.getElementById("evento-DavidTuru");
+
+    videoTUP1.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+        /*this.muted = false;*/
+        videoTUP2.pause();
+        videoDavidTuru.pause();
+        /*videoDavidTuru.muted = true;*/
+      },
+      false
+    );
+
+    videoTUP2.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+        /*this.muted = false;*/
+        videoTUP1.pause();
+        videoDavidTuru.pause();
+        /*videoTUP.muted = true;*/
+      },
+      false
+    );
+
+    videoDavidTuru.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+        /*this.muted = false;*/
+        videoTUP1.pause();
+        videoTUP2.pause();
+        /*videoTUP.muted = true;*/
+      },
+      false
+    );
+
+    let options = {
+      root: null, // usando el viewport como contenedor
+      rootMargin: "0px",
+      threshold: 0, // ajusta este valor según tus necesidades
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    observer.observe(videoTUP1);
+    observer.observe(videoTUP2);
+    observer.observe(videoDavidTuru);
+
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (!entry.isIntersecting) {
+          video.pause();
+        }
+      });
+    }
+  });
+</script>

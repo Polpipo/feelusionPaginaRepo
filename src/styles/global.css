@@ -1,0 +1,60 @@
+/* TODO: consider creating <Button> and <GradientText> components */
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('../assets/font/League-Spartan/LeagueSpartan-Bold.otf') format('opentype'); /* Asegúrate de tener el formato correcto y la ruta adecuada */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Questrial';
+  src: url('../assets/font/Questrial/Questrial-Regular.ttf') format('truetype'); /* Asegúrate de tener el formato correcto y la ruta adecuada */
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/font/Montserrat/static/Montserrat-Medium.ttf') format('truetype'); /* Asegúrate de tener el formato correcto y la ruta adecuada */
+  /*src: url('../assets/font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'); /* Asegúrate de tener el formato correcto y la ruta adecuada */
+  font-display: swap;
+}
+
+
+#logo{
+  font-family: 'LeagueSpartan', sans-serif;
+  font-size: 65px;
+}
+@media (min-width: 768px) {
+  #logo {
+      font-size: 85px; /* md */
+  }
+}
+#events{
+  font-family: 'Questrial', sans-serif;
+}
+
+
+p, h2, h3, #slot {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.pasos{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+a,
+.btn {
+  @apply transition-colors duration-200;
+  @apply hover:text-primary;
+/*   @apply focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-transparent; */
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-tl from-gray-300 via-yellow-400 to-yellow-600;
+}
+
+.text-wrap-balance {
+  text-wrap: balance;
+}
+
+.text-wrap-pretty {
+  text-wrap: pretty;
+}

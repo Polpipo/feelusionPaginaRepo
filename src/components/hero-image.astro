@@ -1,0 +1,180 @@
+---
+import { Image } from "astro:assets";
+
+import img243A1485 from '~/assets/hero-images/243A1485.jpg';
+import imgAlumnos7 from '~/assets/hero-images/Alumnos7.jpg';
+import imgTPFoto111 from '~/assets/hero-images/TP-foto-11.jpg';
+import imgTPFoto141 from '~/assets/hero-images/TP-Foto-14.jpg';
+import imgTPFoto151 from '~/assets/hero-images/TP-Foto-15.jpg';
+import imgTPFoto181 from '~/assets/hero-images/TP-Foto-18.jpg';
+import imgTPFoto191 from '~/assets/hero-images/TP-Foto-19.jpg';
+import imgTPFoto211 from '~/assets/hero-images/TP-Foto-21.jpg';
+import imgTPFoto241 from '~/assets/hero-images/TP-Foto-24.jpg';
+import imgTPFoto361 from '~/assets/hero-images/TP-Foto-36.jpg';
+import imgTPFoto371 from '~/assets/hero-images/TP-Foto-37.jpg';
+import imgTPFoto411 from '~/assets/hero-images/TP-Foto-41.jpg';
+import imgTPFoto491 from '~/assets/hero-images/TP-Foto-49.jpg';
+import imgTPFoto501 from '~/assets/hero-images/TP-Foto-50.jpg';
+import imgTPFoto551 from '~/assets/hero-images/TP-Foto-55.jpg';
+import imgTPFoto561 from '~/assets/hero-images/TP-Foto-56.jpg';
+import imgTPFoto571 from '~/assets/hero-images/TP-Foto-57.jpg';
+import imgTPFoto631 from '~/assets/hero-images/TP-Foto-63.jpg';
+import imgTPFoto751 from '~/assets/hero-images/TP-Foto-75.jpg';
+import imgTPFoto801 from '~/assets/hero-images/TP-Foto-80.jpg';
+import imgTPFoto961 from '~/assets/hero-images/TP-Foto-96.jpg';
+import imgTPFoto981 from '~/assets/hero-images/TP-Foto-98.jpg';
+import imgYEfoto101 from '~/assets/hero-images/YE-Foto-10.jpg';
+import imgYEfoto231 from '~/assets/hero-images/YE-Foto-23.jpg';
+import imgYEfoto271 from '~/assets/hero-images/YE-Foto-27.jpg';
+import imgYEfoto411 from '~/assets/hero-images/YE-Foto-41.jpg';
+import imgYEfoto591 from '~/assets/hero-images/YE-Foto-59.jpg';
+
+// ... Continúa con el resto de las importaciones
+
+const images = [
+
+  { src: imgTPFoto631, alt: 'Descripción para TP-Foto-63' },
+  { src: imgYEfoto101, alt: 'Descripción para YE-Foto-10' },
+  { src: imgAlumnos7, alt: 'Descripción para Alumnos7' },
+  { src: imgTPFoto111, alt: 'Descripción para TP-foto-11' },
+
+
+  { src: imgTPFoto141, alt: 'Descripción para TP-Foto-14' },
+  { src: imgTPFoto151, alt: 'Descripción para TP-Foto-15' },
+  { src: imgTPFoto181, alt: 'Descripción para TP-Foto-18' },
+  { src: imgTPFoto191, alt: 'Descripción para TP-Foto-19' },
+
+
+  { src: imgTPFoto211, alt: 'Descripción para TP-Foto-21' },
+  { src: imgTPFoto411, alt: 'Descripción para TP-Foto-41' },
+  { src: imgTPFoto361, alt: 'Descripción para TP-Foto-36' },
+  { src: imgTPFoto371, alt: 'Descripción para TP-Foto-37' },
+
+
+  { src: imgTPFoto981, alt: 'Descripción para TP-Foto-98' },
+  { src: imgTPFoto961, alt: 'Descripción para TP-Foto-96' },
+  { src: imgTPFoto491, alt: 'Descripción para TP-Foto-49' },
+  { src: imgTPFoto501, alt: 'Descripción para TP-Foto-50' },
+
+
+  { src: imgTPFoto551, alt: 'Descripción para TP-Foto-55' },
+  { src: imgYEfoto591, alt: 'Descripción para TP-Foto-59' },
+  { src: imgTPFoto571, alt: 'Descripción para TP-Foto-57' },
+  { src: img243A1485, alt: 'Descripción para 243A1485' },
+
+
+  { src: imgTPFoto241, alt: 'Descripción para TP-Foto-24' },
+  { src: imgTPFoto801, alt: 'Descripción para TP-Foto-80' },
+  { src: imgTPFoto751, alt: 'Descripción para TP-Foto-75' },
+  { src: imgTPFoto561, alt: 'Descripción para TP-Foto-56' },
+  { src: imgYEfoto231, alt: 'Descripción para YE-Foto-23' },
+  { src: imgYEfoto271, alt: 'Descripción para YE-Foto-27' },
+  { src: imgYEfoto411, alt: 'Descripción para YE-Foto-41' },
+  // ... Continúa con el resto de las imágenes
+];
+
+const chunkSize = 4;
+const imageChunks = [];
+for (let i = 0; i < images.length; i += chunkSize) {
+  imageChunks.push(images.slice(i, i + chunkSize));
+}
+
+const widths = [300, 600, 800];
+const sizes = "(max-width: 768px) 10vw, (max-width: 1024px) 10vw, 15vw";
+
+---
+
+<div class="grid md:grid-cols-[repeat(5,_clamp(280px,_20vw,_100vw))] grid-cols-[repeat(5,_clamp(150px,_20vw,_100vw))] max-h-full">
+  {imageChunks.map((chunk, index) => (
+    <div class="column">
+      {chunk.map((image) => (
+        <Image 
+          src={image.src}
+          alt={image.alt}
+          widths={widths}
+          sizes={sizes}
+          *load
+          loading="eager"
+        />
+      ))}
+    </div>
+  ))}
+</div>
+
+<style>
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+:root {
+	--gap: 1rem;
+	--card-width: clamp(280px, 20vw, 100vw);
+	--card-aspect-ratio: 300 / 450;
+	--card-height: calc(var(--card-width) * (300 / 450));
+}
+
+.grid {
+	display: grid;
+	justify-content: center;
+	gap: 1rem;
+  /* overflow: hidden shouldn't break this? */
+  overflow: hidden;
+}
+
+.column {
+	display: grid;
+	gap: 1rem;
+  align-content: start;
+}
+
+.column:not(:nth-of-type(3)) {
+	animation: scale 2s linear both;
+	animation-timeline: scroll(root);
+}
+
+@media (max-width: 768px) {
+  .column:not(:nth-of-type(3)) {
+    animation: none;
+  }
+}
+
+/* The distance is the number of cards minus 100vh */
+.column:is(:nth-of-type(2), :nth-of-type(4)) {
+	--origin: calc(var(--gap) * -1);
+	--destination: calc(var(--card-height) * 3 + var(--gap));
+}
+.column:is(:nth-of-type(1), :nth-of-type(5)) {
+	--origin: calc(var(--gap) * -2);
+	--destination: calc(var(--card-height) * 7 + var(--gap));
+}
+
+@keyframes scale {
+	0% {
+		transform: translateY(var(--origin, 0%));
+	}
+	100% {
+		transform: translateY(var(--destination, -50%));
+	}
+}
+
+img {
+	max-width: 100%;
+	border: 0;
+	padding: 0;
+	max-height: 100%;
+	width: 100%;
+	aspect-ratio: 300 / 450;
+	background: hsl(0 0% 80%);
+  filter: grayscale(100%) contrast(1.5);
+}
+</style>
+<!-- <Image
+  class="h-full w-full object-cover"
+  src={moonImage}
+  widths={widths}
+  sizes={sizes}
+  alt="The ridged surface of the moon"
+/> -->

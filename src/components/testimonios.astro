@@ -1,0 +1,234 @@
+---
+import { Image } from "astro:assets";
+import ContentSection from "~/components/content-section.astro";
+import SergioBegueria from "../assets/testimonios/sergioBegueria.jpg";
+import Juan from "../assets/testimonios/juan.jpg";
+import DavidTuru from "../assets/testimonios/davidTuru.jpg";
+import TestimonioDavituru from "../assets/testimonios/Testimonio_Davituru.mp4";
+import TestimonioSergio from "../assets/testimonios/Testimonio_Sergio_TUP.mp4";
+import TestimonioJuan from "../assets/testimonios/Testimonio_Juan_TUP.mp4";
+
+const widths = [450, 800];
+const sizes = "(min-width: 640px) 42vw, 67vw";
+---
+
+<ContentSection title="Casos de éxito" id="casos-exito">
+  <!--<Fragment slot="lead">
+    Astro comes <span class="text-primary">batteries included</span>. It takes
+    the best parts of
+    <span class="text-primary">state-of-the-art</span>
+     tools and adds its own <span class="text-primary">innovations</span>.
+  </Fragment>-->
+  <div class="lg:h-screen h-full w-full text-center">
+    <h3
+      class="text-center font-extrabold text-3xl hover:scale-110 duration-300"
+    >
+      TENGO UN PLAN
+    </h3>
+    <div class="h-full w-full grid lg:grid-cols-2 my-8 lg:my-0">
+      <div class="relative">
+        <div class="grid lg:grid-cols-2 lg:h-4/5 py-16 lg:py-0">
+          <div class="lg:relative flex lg:block">
+            <a href="#sergio-begueria">
+              <div
+                class="lg:absolute w-1/2 lg:w-2/3 inset-0 m-auto lg:left-[150px] h-fit rounded-xl -rotate-12 hover:z-10 hover:rotate-0 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-110 duration-300"
+              >
+                <Image
+                  src={SergioBegueria}
+                  alt="Imagen de Sergio Begueria"
+                  widths={widths}
+                  sizes={sizes}
+                  class="rounded-xl"
+                  *load
+                  loading="eager"
+                />
+                <p
+                  class="text-center text-md md:text-xl font-extrabold absolute top-2 md:top-10 mx-auto w-full drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+                >
+                  SERGIO BEGUERIA
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="lg:relative flex lg:block">
+            <a href="#juan-domline">
+              <div
+                class="lg:absolute w-1/2 lg:w-2/3 inset-0 m-auto rounded-xl lg:right-[80px] h-fit rotate-12 hover:z-10 hover:rotate-0 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-110 duration-300"
+              >
+                <Image
+                  src={Juan}
+                  alt="Imagen de Juan Domline"
+                  widths={widths}
+                  sizes={sizes}
+                  class="rounded-xl"
+                  *load
+                  loading="eager"
+                />
+                <p
+                  class="text-center text-md md:text-xl font-extrabold absolute top-2 md:top-10 mx-auto w-full drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+                >
+                  JUAN DOMLINE
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a target="_blank"
+        rel="noopener noreferrer"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfjYNuh1_sX66Bujs5HlaoJSuSMJ6kYkM2xcQqYA91WuP8u6A/viewform"
+        >
+        <button
+          class="rounded-full w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
+          >TRABAJA CON NOSOTROS</button
+        >
+        </a>
+      </div>
+
+      <div class="lg:relative order-2">
+        <video
+          id="sergio-begueria"
+          style="z-index: 10;"
+          class="w-2/3 mx-auto lg:w-fit lg:h-4/5 lg:absolute mt-20 lg:m-auto inset-0 bottom-10 right-32 rounded hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-105 duration-300"
+          controls
+          autoplay
+          muted
+          loop
+          preload="metadata"
+        >
+          <source src={TestimonioSergio} type="video/mp4" />
+        </video>
+        <video
+          id="juan-domline"
+          style="z-index: 5;"
+          class="w-2/3 mx-auto lg:w-fit lg:h-4/5 lg:absolute mt-20 lg:m-auto inset-0 top-10 left-32 rounded hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-105 duration-300"
+          controls
+          autoplay
+          muted
+          loop
+          preload="metadata"
+        >
+          <source src={TestimonioJuan} type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:h-screen h-full w-full">
+    <h3
+      class="text-center font-extrabold text-3xl mt-12 lg:mt-24 hover:scale-110 duration-300"
+    >
+      DAVID TEVOSYAN
+    </h3>
+    <div class="h-full w-full grid lg:grid-cols-2 my-8 lg:my-0">
+      <div class="relative order-1 lg:order-2 text-center">
+        <div class="grid lg:h-4/5">
+          <div
+            class="lg:absolute w-1/2 lg:w-1/3 inset-0 m-auto mt-8 mb-16 lg:mb-0 lg:mt-32 h-fit rounded-xl rotate-12 hover:z-10 hover:rotate-0 hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-105 duration-300"
+          >
+            <a class="appearance-none" href="#david-turu">
+              <Image
+                src={DavidTuru}
+                alt="Imagen de David Tevosyan"
+                widths={widths}
+                sizes={sizes}
+                class="rounded-xl"
+                *load
+                loading="eager"
+              />
+              <p
+                class="text-center text-md md:text-xl font-extrabold absolute top-2 md:top-10 mx-auto w-full drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
+              >
+                DAVITURU
+              </p>
+            </a>
+          </div>
+        </div>
+        <a target="_blank"
+        rel="noopener noreferrer"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfjYNuh1_sX66Bujs5HlaoJSuSMJ6kYkM2xcQqYA91WuP8u6A/viewform"
+        >
+        <button
+          class="rounded-full w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
+          >RESERVA LLAMADA</button
+        >
+        </a>
+      </div>
+
+      <div class="lg:relative order-2 lg:order-1">
+        <video
+          id="david-turu"
+          style="z-index: 10;"
+          class="w-2/3 lg:w-fit mx-auto lg:h-4/5 lg:absolute mt-20 lg:m-auto inset-0 rounded hover:shadow-[0px_0px_15px_5px_rgba(255,255,255,0.5)] hover:scale-105 duration-300"
+          controls
+          autoplay
+          muted
+          loop
+          preload="metadata"
+        >
+          <source src={TestimonioDavituru} type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</ContentSection>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    const SergioBegueria = document.getElementById("sergio-begueria");
+    const JuanDomline = document.getElementById("juan-domline");
+    const DavidTuru = document.getElementById("david-turu");
+
+    SergioBegueria.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+        this.style.zIndex = 10; // Mueve al fondo
+        JuanDomline.style.zIndex = 5; // Trae el otro video al frente
+        JuanDomline.pause();
+      },
+      false
+    );
+
+    JuanDomline.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+        this.style.zIndex = 10; // Mueve al frente
+        SergioBegueria.style.zIndex = 5; // Envía el primer video al fondo
+        SergioBegueria.pause();
+      },
+      false
+    );
+
+    DavidTuru.addEventListener(
+      "mouseover",
+      function () {
+        this.play();
+      },
+      false
+    );
+
+    let options = {
+      root: null, // usando el viewport como contenedor
+      rootMargin: "0px",
+      threshold: 0, // ajusta este valor según tus necesidades
+    };
+
+    
+  let observer = new IntersectionObserver(handleIntersection, options);
+
+  observer.observe(SergioBegueria);
+  observer.observe(JuanDomline);
+  observer.observe(DavidTuru);
+  // Agrega más videos si es necesario
+
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          entry.target.pause();
+        } 
+      
+    });
+  }
+  });
+</script>
