@@ -24,8 +24,15 @@ module.exports = {
       },
       backgroundImage: {
         product: "linear-gradient(rgba(0, 0, 0, 0.95), rgba(31, 41, 55, 0.95)), url('/src/assets/bg-image.webp')",
+        hero: "linear-gradient(rgba(0, 0, 0, 0.95), rgba(31, 41, 55, 0.6)), url('/src/assets/fotoHero.jpeg')",
       },
-      
+      backgroundPosition: {
+        'hero-center': 'center',
+      },
+
+      backgroundSize: {
+        'hero-cover': 'cover',
+      },
       
     },
   },

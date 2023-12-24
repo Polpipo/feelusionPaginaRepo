@@ -1,0 +1,92 @@
+---
+import "@fontsource-variable/inter";
+
+import LeagueSpartanFont from "~/assets/font/League-Spartan/LeagueSpartan-Bold.otf";
+import QuestrialFont from "~/assets/font/Questrial/Questrial-Regular.ttf";
+import Footer from "~/components/footer.astro";
+
+const { generator } = Astro;
+const site = "https://www.feelusion.com/";
+const imagePath = "https://www.feelusion.com/feelusionLogo.png";
+const image = new URL(imagePath).toString();
+const description =
+  "Organización y gestión de eventos para emprendedores"
+
+---
+
+<!doctype html>
+<html lang="es" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  
+    <meta name="generator" content={generator} />
+
+    <title>Feelusion</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Feelusion" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+
+    <!-- twitter -->
+    <meta name="twitter:title" content="Feelusion">
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={image}>
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Indexación -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Configuración de idioma -->
+    <meta name="language" content="es" />
+
+    <link
+      rel="preload"
+      href={LeagueSpartanFont}
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={QuestrialFont}
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+    <slot></slot>
+    <Footer></Footer>
+  </body>
+</html>

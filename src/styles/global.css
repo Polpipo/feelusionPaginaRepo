@@ -58,3 +58,30 @@ a,
 .text-wrap-pretty {
   text-wrap: pretty;
 }
+
+
+.portfolio-eventos .filter-btns li.active{
+	color:#facc15;
+}
+.portfolio-eventos .filter-btns li:hover{
+  color:#aa8903;
+  scale: 1.1;
+}
+
+.portfolio-eventos .filter-btns li{
+	position:relative;
+	font-weight:500;
+	cursor:pointer;
+  font-size:24px;
+	color:#c3c3c3;
+	margin-right:45px;
+	display:inline-block;
+  text-transform: uppercase;
+  -moz-transition:all 500ms ease;
+  -webkit-transition:all 500ms ease;
+  -ms-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+}
+
+

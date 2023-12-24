@@ -1,0 +1,46 @@
+---
+import { Eventos } from '../../constants/index';
+import Layout from "../../layouts/layout.astro";
+import Header from "../../components/header.astro";
+import Hero from "../../components/hero.astro";
+import Footer from "../../components/footer.astro";
+import Evento from "../../components/evento.astro";
+
+export async function getStaticPaths() {
+  // Generar rutas para cada evento individual
+  const paths = Eventos.flatMap(empresa =>
+    empresa.eventos.map(evento => {
+      // Asegúrate de que cada evento tenga una URL
+      if (evento.url) {
+        return { params: { empresa: evento.url.substring(1) } };
+      } else {
+        // Manejar el caso donde 'url' no está definido
+        console.error(`Evento sin URL: ${JSON.stringify(evento)}`);
+        return null;
+      }
+    })
+  ).filter(Boolean); // Filtra elementos nulos o undefined
+
+  return paths;
+}
+
+const empresaId = Astro.params.empresa;
+// Encuentra la empresa y el evento específico basado en la URL
+const empresa = Eventos.find(e => e.eventos.some(evento => evento.url === `/${empresaId}`));
+const evento = empresa ? empresa.eventos.find(evento => evento.url === `/${empresaId}`) : null;
+
+---
+
+
+<!-- Aquí puedes usar 'empresa' para mostrar la información específica -->
+{empresa ? (
+  <Layout>
+  <Header/>
+  <div class="px-8 pt-36 pb-12 bg-product bg-cover">
+    <Evento titulo={evento?.titulo} contenido={evento?.contenido} />
+  </div>
+</Layout>
+  
+) : (
+  <p>Empresa no encontrada</p>  // Manejar el caso de que no se encuentre la empresa
+)}

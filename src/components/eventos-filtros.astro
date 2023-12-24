@@ -1,0 +1,141 @@
+---
+import { Image } from "astro:assets";
+
+
+import { Eventos } from "../constants/index";
+
+const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
+---
+
+<!-- Portfolio Two -->
+<section class="portfolio-eventos relative pt-20">
+  <div class="container mx-auto relative max-w-screen-2xl">
+    <!-- Isotope Gallery -->
+    <div class="sortable-masonry">
+      <!-- Filter -->
+      <div class="filters clearfix">
+        <ul class="filter-tabs filter-btns relative mb-8 flex">
+            <li class="active filter" data-role="button" data-filter=".all">
+                Todos
+            </li>
+            {
+                Eventos.map((evento: any) => {
+                  return (
+                    <li class="filter" data-filter=`.${evento.id}` data-role="button" >
+                        {evento.collection}
+                    </li>
+                  )
+                })
+            }
+        </ul>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          Eventos.flatMap((empresa) =>
+            empresa.eventos.map((evento) => {
+              const urlActual = Astro.request.url;
+              const urlEvento = `${urlActual}${evento.url}`;
+              return (
+                <a class={`group aspect-video hover:!text-default ${empresa.id} all`} href={urlEvento}>
+                  <figure class="relative h-full w-full overflow-hidden rounded-xl">
+                    <Image
+                      class="w-full h-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                      src={evento.imagen}
+                      width={450}
+                      height={450}
+                      sizes={sizes}
+                      alt={evento.titulo}
+                    />
+                    <figcaption class="absolute inset-0">
+                      <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                        <h3 class="text-center font-extrabold uppercase text-xl">
+                          {evento.titulo}
+                        </h3>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </a>
+              );
+            })
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Añadir un manejador de eventos a los elementos li
+  document.querySelectorAll('.filter-tabs li').forEach((li) => {
+      li.addEventListener('click', (event) => {
+          const target = event.currentTarget as HTMLElement;
+          const filterClass = target.getAttribute('data-filter');
+
+          // Quitar la clase 'active' de todos los elementos li
+          document.querySelectorAll('.filter-tabs li').forEach((li) => {
+              li.classList.remove('active');
+          });
+
+          // Añadir la clase 'active' al elemento li clickeado
+          target.classList.add('active');
+
+          // Ocultar todos los elementos a
+          document.querySelectorAll('.portfolio-eventos a').forEach(el => {
+              const a = el as HTMLElement; // Aserción de tipo a HTMLElement
+              a.style.display = 'none';
+          });
+
+          // Mostrar solo aquellos elementos a que coincidan con el filtro seleccionado
+          if (filterClass === '.all') {
+              document.querySelectorAll('.portfolio-eventos a').forEach(el => {
+                  const a = el as HTMLElement; // Aserción de tipo a HTMLElement
+                  a.style.display = 'block';
+              });
+          } else {
+              document.querySelectorAll(`.portfolio-eventos a${filterClass}`).forEach(el => {
+                  const a = el as HTMLElement; // Aserción de tipo a HTMLElement
+                  a.style.display = 'block';
+              });
+          }
+      });
+  });
+
+ 
+  /*
+
+  // Asegurarse de que jQuery e Isotope estén cargados
+  (function($) {
+    // Inicializar Isotope para mampostería
+    function initSortableMasonry() {
+      if ($('.sortable-masonry').length) {
+        var $container = $('.sortable-masonry .items-container');
+        $container.isotope({
+          // Configuración inicial de Isotope
+          itemSelector: '.masonry-item',
+          masonry: {
+            columnWidth: '.masonry-item.col-lg-3'
+          }
+        });
+      }
+    }
+
+    // Inicializar Isotope al cargar
+    initSortableMasonry();
+
+    // Manejar clics en elementos li para filtrado
+    $('.filter-tabs li').on('click', function() {
+      // Cambiar clase 'active'
+      $('.filter-tabs li').removeClass('active');
+      $(this).addClass('active');
+
+      // Filtrar con Isotope
+      var filterValue = $(this).attr('data-filter');
+      $('.sortable-masonry .items-container').isotope({ filter: filterValue });
+    });
+
+  })(window as any.jQuery);
+
+*/
+
+</script>
