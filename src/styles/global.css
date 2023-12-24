@@ -31,7 +31,7 @@
 }
 
 
-p, h2, h3, #slot {
+*, p, h2, h3, #slot {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -83,5 +83,3 @@ a,
   -o-transition:all 500ms ease;
   transition:all 500ms ease;
 }
-
-

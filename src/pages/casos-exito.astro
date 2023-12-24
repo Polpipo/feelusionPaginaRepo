@@ -4,17 +4,15 @@ import "../styles/index.css";
 import Layout from "~/layouts/layout.astro";
 import Header from "~/components/header.astro";
 import Hero from "~/components/hero.astro";
-import Team from "~/components/team.astro";
+import Testimonio from "~/components/testimonios.astro";
 import InfoNosotros from "~/components/info-nosotros.astro";
 import Features from "~/components/features.astro";
 ---
 
 <Layout>
   <Header/>
-  <Hero title="Sobre nosotros" description="Información sobre el equipo"/>
-  <div class="space-y-24 px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
-    <Team />
-    <InfoNosotros />
-    <Features/>
+  <Hero title="Casos de éxito" description="Emprendedores con los que hemos trabajado"/>
+  <div class="space-y-24 px-12 bg-product pt-12 pb-24 bg-cover">
+    <Testimonio></Testimonio>
   </div>
 </Layout>
