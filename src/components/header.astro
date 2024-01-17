@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "~/components/theme-switcher.astro";
-import type { NavItem } from "~/types";
-import Logo from "~/assets/logo.png";
-import Instagram from "~/assets/Instagram.png";
+import ThemeSwitcher from "@/components/theme-switcher.astro";
+import type { NavItem } from "@/types";
+import Logo from "@/assets/logo.png";
+import Instagram from "@/assets/Instagram.png";
 
 const navItems: Array<NavItem> = [
   { title: "Inicio", url: "/" },
@@ -94,6 +94,23 @@ const navItems: Array<NavItem> = [
 </header>
 
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Primero, eliminar la clase activa de todos los enlaces
+    navLinks.forEach(link => {
+      link.classList.remove('active-tab');
+    });
+
+    // Luego, añadir la clase activa al enlace correspondiente
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPath) {
+        link.classList.add('active-tab');
+      }
+    });
+  });
+
   import MicroModal from "micromodal";
   import invariant from "tiny-invariant";
 
@@ -134,15 +151,12 @@ const navItems: Array<NavItem> = [
   });
 </script>
 
-<noscript>
-  <style>
-    #open-nav-button {
-      display: none;
-    }
-  </style>
-</noscript>
 
 <style>
+  #open-nav-button {
+      display: none;
+  }
+
   .fixed-header {
     @apply fixed bottom-auto top-0;
     @apply bg-zinc-900 opacity-95  transition-all duration-300;

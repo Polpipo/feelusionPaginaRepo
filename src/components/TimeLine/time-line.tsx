@@ -5,11 +5,11 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 //import Meeting from "../../assets/initialMeetingIcon.png";
-import icon1 from "~/icons/timeline/1.svg";
-import icon2 from "~/icons/timeline/2.svg";
-import icon3 from "~/icons/timeline/3.svg";
-import icon4 from "~/icons/timeline/4.svg";
-import icon5 from "~/icons/timeline/5.svg";
+import icon1 from "@/icons/timeline/1.svg";
+import icon2 from "@/icons/timeline/2.svg";
+import icon3 from "@/icons/timeline/3.svg";
+import icon4 from "@/icons/timeline/4.svg";
+import icon5 from "@/icons/timeline/5.svg";
 
 
 const TimeLineTSX: React.FC = (iconsArray: any) => {

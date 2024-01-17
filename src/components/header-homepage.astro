@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "~/components/theme-switcher.astro";
-import type { NavItem } from "~/types";
-import Logo from "~/assets/logo.png";
-import Instagram from "~/assets/Instagram.png";
+import ThemeSwitcher from "@/components/theme-switcher.astro";
+import type { NavItem } from "@/types";
+import Logo from "@/assets/logo.png";
+import Instagram from "@/assets/Instagram.png";
 
 const navItems: Array<NavItem> = [
   { title: "Inicio", url: "/" },
@@ -116,6 +116,17 @@ const navItems: Array<NavItem> = [
 </header>
 
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+    
+    if (currentPath === '/') {
+      const homeLink = document.querySelector('nav a[href="/"]');
+      if (homeLink) {
+        homeLink.classList.add('active-tab');
+      }
+    }
+  });
+
   import MicroModal from "micromodal";
   import invariant from "tiny-invariant";
 
@@ -155,15 +166,11 @@ const navItems: Array<NavItem> = [
   });
 </script>
 
-<noscript>
-  <style>
-    #open-nav-button {
-      display: none;
-    }
-  </style>
-</noscript>
 
 <style>
+  #open-nav-button {
+      display: none;
+  }
   .fixed-header {
     @apply fixed bottom-auto top-0;
     @apply border-default bg-zinc-900 opacity-95 text-default transition-all duration-300;

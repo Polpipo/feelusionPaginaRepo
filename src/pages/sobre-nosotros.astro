@@ -1,20 +1,23 @@
 ---
 import "../styles/index.css";
 
-import Layout from "~/layouts/layout.astro";
-import Header from "~/components/header.astro";
-import Hero from "~/components/hero.astro";
-import Team from "~/components/team.astro";
-import MeetTeam from "~/components/meet-the-team.astro";
-import InfoNosotros from "~/components/info-nosotros.astro";
-import Features from "~/components/features.astro";
+import Layout from "@/layouts/layout.astro";
+import Header from "@/components/header.astro";
+import Hero from "@/components/hero.astro";
+import Team from "@/components/team.astro";
+import MeetTeam from "@/components/meet-the-team.astro";
+import InfoNosotros from "@/components/info-nosotros.astro";
+import Features from "@/components/features.astro";
 ---
 
 <Layout>
   <Header/>
   <Hero title="Sobre nosotros" description="Información sobre el equipo"/>
-  <div class="space-y-24 px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
+  <div class="bg-gradient-to-b from-[#0c0c0c] via-black to-[#0c0c0c]">
     <Team />
-    <InfoNosotros />
   </div>
+   
+    <div class="space-y-24 px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
+      <InfoNosotros />
+    </div>
 </Layout>

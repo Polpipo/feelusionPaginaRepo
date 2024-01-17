@@ -1,12 +1,12 @@
 ---
-import Features from "~/components/features.astro";
-import HeaderHomepage from "~/components/header-homepage.astro";
-import Testimonios from "~/components/testimonios.astro";
-import VideoPresentacion from "~/components/video-presentacion.astro";
-import NuestrosEventos from "~/components/nuestros-eventos.astro";
-import Splash from "~/components/splash.astro";
-import "~/styles/index.css";
-import TimeLine from "~/components/TimeLine/time-line.astro";
+import Features from "@/components/features.astro";
+import HeaderHomepage from "@/components/header-homepage.astro";
+import Testimonios from "@/components/testimonios.astro";
+import VideoPresentacion from "@/components/video-presentacion.astro";
+import NuestrosEventos from "@/components/nuestros-eventos.astro";
+import Splash from "@/components/splash.astro";
+import "@/styles/index.css";
+import TimeLine from "@/components/TimeLine/time-line.astro";
 
 import Layout from "../layouts/layout.astro";
 ---
@@ -20,7 +20,5 @@ import Layout from "../layouts/layout.astro";
     <NuestrosEventos />
     <Features />
     <TimeLine />
-
-
   </div>
 </Layout>
