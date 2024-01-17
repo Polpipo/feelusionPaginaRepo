@@ -1,0 +1,18 @@
+---
+import "~/styles/index.css";
+
+import Layout from "~/layouts/layout.astro";
+import Header from "~/components/header.astro";
+import Hero from "~/components/hero.astro";
+
+import Features from "~/components/features.astro";
+import ContactForm from "~/components/contact-form.tsx";
+---
+
+<Layout>
+  <Header/>
+  <Hero title="Nuestros servicios" description="¿Qué te ofrecemos?"/>
+    <div class="px-8 py-12 bg-product bg-cover space-y-12">
+        <ContactForm language="es" client:only />
+    </div>
+</Layout>

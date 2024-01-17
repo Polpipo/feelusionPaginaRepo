@@ -59,6 +59,9 @@ a,
   text-wrap: pretty;
 }
 
+.active-tab {
+	color:#facc15;
+}
 
 .portfolio-eventos .filter-btns li.active{
 	color:#facc15;
@@ -206,4 +209,29 @@ a,
 .team-one .owl-nav{
   position: relative;
   top: 0px;
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.shake-animation {
+  animation: shake 1s ease-in-out;
 }
