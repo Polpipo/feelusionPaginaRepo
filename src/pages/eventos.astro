@@ -6,12 +6,14 @@ import Header from "@/components/header.astro";
 import Hero from "@/components/hero.astro";
 
 import EventosFiltros from "@/components/eventos-filtros.astro";
+import Footer from "@/components/footer.astro";
 ---
 
 <Layout>
   <Header/>
   <Hero title="Eventos" description="Empresas con las que hemos trabajado"/>
-  <div class="px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
+  <div class="px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover min-h-[800px]">
     <EventosFiltros></EventosFiltros>
   </div>
+  <Footer/>
 </Layout>

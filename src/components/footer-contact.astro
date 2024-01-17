@@ -1,8 +1,6 @@
 ---
 import "@/styles/index.css";
-import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
-import ContactoFooter from "@/components/contact-form-footer";
 import type { FooterLink } from "@/types";
 
 import Instagram from "./icons/instagram.astro";
@@ -30,7 +28,7 @@ const links: Array<FooterLink> = [
   },
 ];
 ---
-<ContactoFooter language="es" client:only />
+
 <footer class="py-3 px-10 pie bg-zinc-900">
   <div class="w-full md:grid md:grid-cols-12 flex gap-5 flex-col items-center mx-auto">
     <div class="md:col-span-4 order-1 w-fit">
