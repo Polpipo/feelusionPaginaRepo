@@ -83,3 +83,127 @@ a,
   -o-transition:all 500ms ease;
   transition:all 500ms ease;
 }
+
+
+/*** 
+
+====================================================================
+  Team One
+====================================================================
+
+***/
+
+.team-one{
+  position: relative;
+  padding: 110px 0px 100px;
+}
+
+.team-one.style-two{
+  background-color: #f9f9f9;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.team-one.style-two .team-block_one .inner-box{
+  background-color: #ffffff;
+}
+
+.team-one .owl-nav{
+  position: absolute;
+  right: 0px;
+  top: -120px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.20);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.team-one .owl-prev{
+  position: relative;
+}
+
+.team-one .owl-nav .owl-prev,
+.team-one .owl-nav .owl-next{
+  position: relative;
+  margin: 0px 10px;
+  font-size: 20px;
+  line-height: 1em !important;
+  transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+}
+
+.team-one .owl-nav .owl-prev:hover,
+.team-one .owl-nav .owl-next:hover{
+  color: rgba(0, 0, 0, 0.80);
+}
+
+.team-block_one{
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.team-block_one .inner-box{
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 15px 20px;
+  border: 1px solid #000000;
+  background-color: #f9f9f9;
+}
+
+.team-block_one .content{
+  position: relative;
+}
+
+.team-block_one .content h3{
+  position: relative;
+  font-size: 38px;
+  margin-bottom: 5px;
+  font-family: 'Lunchtype_Medium';
+}
+
+.team-block_one .content h3 a{
+  position: relative;
+  color: #000000;
+}
+
+.team-block_one .content .designation{
+  position: relative;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Lunchtype_Medium';
+}
+
+.team-block_one .image{
+  position: relative;
+  border-radius: 10px;
+  margin-top: 25px;
+  border: 1px solid #000000;
+  background: url(../images/background/team-patttern.png);
+}
+
+.team-block_one .social-links{
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+.team-block_one .social-links li{
+  position: relative;
+  margin: 0px 5px;
+  width: 34px;
+  display: inline-block;
+}
+
+.team-block_one .social-links li a{
+  position: relative;
+}
+
+.team-one .owl-nav{
+  position: relative;
+  top: 0px;
+}

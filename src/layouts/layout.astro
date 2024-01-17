@@ -5,6 +5,9 @@ import LeagueSpartanFont from "~/assets/font/League-Spartan/LeagueSpartan-Bold.o
 import QuestrialFont from "~/assets/font/Questrial/Questrial-Regular.ttf";
 import Footer from "~/components/footer.astro";
 
+import { GoogleAnalytics } from 'astro-google-analytics';
+
+
 const { generator } = Astro;
 const site = "https://www.feelusion.com/";
 const imagePath = "https://www.feelusion.com/feelusionLogo.png";
@@ -23,6 +26,8 @@ const description =
   
     <meta name="generator" content={generator} />
 
+    <GoogleAnalytics id="G-TN7S6CZBCC" />
+    
     <title>Feelusion</title>
     <meta name="description" content={description} />
 
