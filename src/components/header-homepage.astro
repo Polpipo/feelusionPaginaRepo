@@ -14,6 +14,25 @@ const navItems: Array<NavItem> = [
   { title: "Nuestro servicio", url: "/servicio" },
   { title: "Contacto", url: "/contacto" },
 ];
+
+import { getI18N } from "@/i18n";
+/*
+const url = new URL(Astro.request.url);
+let currentLocale;
+
+if (url.pathname.startsWith('/en/')) {
+    currentLocale = 'en'; // Inglés
+} else if (url.pathname.startsWith('/es/')) {
+    currentLocale = 'es'; // Español
+} else if (url.pathname.startsWith('/ca/')) {
+    currentLocale = 'ca'; // Catalán
+} else {
+    currentLocale = 'es'; // Predeterminado a español, por ejemplo
+}
+*/
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const ABOUT = i18n.ABOUT;
 ---
 
 <header
