@@ -9,7 +9,13 @@ const { title, description, image } = Astro.props as Props;
 
 ---
 <section class="bg-hero bg-hero-center bg-hero-cover h-[500px] flex justify-center">
-    <div class="place-self-center text-center">
+    <div
+      class="absolute inset-x-0 top-[-10rem]  transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+      aria-hidden="true"
+    >
+      <div class="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"></div>
+    </div>
+    <div class="place-self-center z-10 text-center">
         <h1 class="gradient-text max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">{title}</h1>
         <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>
         <a href="#">

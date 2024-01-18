@@ -21,25 +21,35 @@ const team:any = Equipo[0].equipo;
     </p>
   </div>
   <!--<div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">-->
+    <!--
+      <Image
+              class="mx-auto mb-2 w-[435px] h-[400px] rounded"
+              src={data.Imagen}
+              alt={data.Nombre}
+              width="435"
+              height="400"
+            />
+     -->
   <div class="grid md:grid-cols-2 ">
     {Object.keys(team).map((miembro) => {
         const data = team[miembro];
         return (
-        <div class="flex flex-col mx-auto text-center w-auto bg-gray-700 border border-default bg-offset p-6 m-6 rounded-lg hover:scale-110 duration-300 hover:shadow-[0px_0px_15px_5px_rgb(217,159,39)]">
-            <h3
-                class="text-2xl font-bold tracking-tight text-gray-300"
-            >
-               <a href={data.Id}>{data.Nombre}</a>
-            </h3>
-            <p class="text-gray-400 text-sm mb-6">{data.Posicion}</p>
-            <Image
-                class="mx-auto mb-2 w-[435px] h-[400px] rounded"
-                src={data.Imagen}
-                alt={data.Nombre}
-                width="435"
-                height="400"
-            />
-            <ul class="flex justify-center mt-4 space-x-4">
+        <div 
+        style={{backgroundImage: `url(${data.Imagen})`}}
+        class="bg-cover bg-no-repeat h-[500px] w-[400px] flex flex-col justify-between mx-auto text-center w-auto bg-gray-700 border border-default bg-offset m-6 rounded-lg hover:scale-110 duration-300 hover:shadow-[0px_0px_15px_5px_rgb(217,159,39)]">
+        <div class="bg-gray-800 p-2 opacity-70">
+          <h3
+          class="text-2xl font-bold tracking-tight text-gray-300"
+          >
+            <a href={data.Id}>{data.Nombre}</a>
+          </h3>
+          <p class="text-gray-400 text-sm">{data.Posicion}</p>
+        </div> 
+        
+            
+            
+            
+            <ul class="flex justify-center space-x-4 bg-gray-700 p-2 opacity-70">
                 <li>
                 <a
                     href=`https://www.instagram.com/${data.Instagram}`

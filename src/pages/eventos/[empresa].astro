@@ -2,7 +2,6 @@
 import { Eventos } from '../../constants/index';
 import Layout from "../../layouts/layout.astro";
 import Header from "../../components/header.astro";
-import Hero from "../../components/hero.astro";
 import Footer from "../../components/footer.astro";
 import Evento from "../../components/evento.astro";
 
@@ -36,9 +35,10 @@ const evento = empresa ? empresa.eventos.find(evento => evento.url === `/${empre
 {empresa ? (
   <Layout>
   <Header/>
-  <div class="px-8 pt-36 pb-12 bg-product bg-cover">
+  <div class="px-8 pt-36 pb-12 bg-product bg-cover z-10">
     <Evento titulo={evento?.titulo} contenido={evento?.contenido} />
   </div>
+  <Footer/>
 </Layout>
   
 ) : (
