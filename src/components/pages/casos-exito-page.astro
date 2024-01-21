@@ -1,0 +1,25 @@
+---
+import "@/styles/index.css";
+
+import Layout from "@/layouts/layout.astro";
+import Header from "@/components/header.astro";
+import Hero from "@/components/hero.astro";
+import Testimonio from "@/components/testimonios.astro";
+import Footer from "@/components/footer.astro";
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const CASOS_EXITO = i18n.CASOS_EXITO;
+
+console.log(currentLocale)
+
+---
+<Layout>
+  <Header/>
+  <Hero title={CASOS_EXITO.TITLE} description={CASOS_EXITO.DESCRIPTION}/>
+  <div class="space-y-24 px-12 bg-product pt-12 pb-24 bg-cover">
+    <Testimonio></Testimonio>
+  </div>
+  <Footer/>
+</Layout>

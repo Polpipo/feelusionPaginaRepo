@@ -1,9 +1,7 @@
 ---
 import "@/styles/index.css";
-import { Icon } from "astro-icon";
 import { Image } from "astro:assets";
 import ContactoFooter from "@/components/contact-form-footer";
-import type { FooterLink } from "@/types";
 
 import Instagram from "./icons/instagram.astro";
 import Facebook from "./icons/face-book.astro";
@@ -12,27 +10,18 @@ import Linkedin from "./icons/linkedin.astro";
 
 import Logo from "@/assets/logo.png";
 
-const links: Array<FooterLink> = [
-  {
-    url: "https://astro.build/",
-    description: "Astro's official website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
-  },
-];
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const FOOTER = i18n.FOOTER;
+const FORM = i18n.FORM;
 ---
-<ContactoFooter language="es" client:only />
+
+<ContactoFooter language="es" contactFormData={FORM} client:only />
 <footer class="py-3 px-10 pie bg-zinc-900">
-  <div class="w-full md:grid md:grid-cols-12 flex gap-5 flex-col items-center mx-auto">
+  <div
+    class="w-full md:grid md:grid-cols-12 flex gap-5 flex-col items-center mx-auto"
+  >
     <div class="md:col-span-4 order-1 w-fit">
       <a href="/">
         <Image
@@ -48,61 +37,55 @@ const links: Array<FooterLink> = [
       <ul class="flex justify-center gap-8 p-3">
         <li>
           <a
-              href=`https://www.instagram.com/feelusion`
-              target="_blank"
-              class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
+            href=`https://www.instagram.com/feelusion`
+            target="_blank"
+            class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
           >
-              <Instagram />
+            <Instagram />
           </a>
-          </li>
-          <li>
+        </li>
+        <li>
           <a
-              href="#"
-              target="_blank"
-              class="text-[#39569c] hover:text-gray-900 dark:hover:text-white"
+            href="#"
+            target="_blank"
+            class="text-[#39569c] hover:text-gray-900 dark:hover:text-white"
           >
             <Facebook />
           </a>
-          </li>
-          <li>
-          <a
-              href="#"
-              target="_blank"
-              class="text-gray-300 hover:text-white"
-          >
+        </li>
+        <li>
+          <a href="#" target="_blank" class="text-gray-300 hover:text-white">
             <X />
           </a>
-          </li>
-          <li>
+        </li>
+        <li>
           <a
-              href="#"
-              class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
+            href="#"
+            class="text-gray-900 hover:text-gray-900 dark:hover:text-white dark:text-gray-300"
           >
-          <Linkedin />
+            <Linkedin />
           </a>
-          </li>
+        </li>
       </ul>
       <p class="text-xs text-gray-300">
-        © 2024{" "}
-        <a
-          href="#"
-          class="hover:text-gray-500"
-        >
-          Feelusion™
+        {FOOTER.CONTENT_1}
+        <a href="#" class="hover:text-yellow-400">
+          {FOOTER.CONTENT_2}
         </a>
-        . Todos los derechos reservados.
+        {FOOTER.CONTENT_3}
       </p>
     </div>
-    <ul class="md:col-span-4 gap-2 md:gap-10 text-sm text-center order-2 md:order-3 md:text-left flex md:flex-row flex-col justify-self-end">
+    <ul
+      class="md:col-span-4 gap-2 md:gap-10 text-xs 2xl:text-sm text-center order-2 md:order-3 md:text-left flex md:flex-row flex-col justify-self-end"
+    >
       <li>
-        <a href="/politica-privacidad">Política de Privacidad</a>
+        <a href="/politica-privacidad">{FOOTER.MENU_1}</a>
       </li>
       <li>
-        <a
-          href="/#contact"
-        >
-          Contacto
-        </a>
+        <a href="/aviso-legal">{FOOTER.MENU_2}</a>
+      </li>
+      <li>
+        <a href="/contacto">{FOOTER.MENU_3}</a>
       </li>
     </ul>
   </div>

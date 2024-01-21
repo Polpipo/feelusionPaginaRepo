@@ -1,0 +1,30 @@
+---
+import "@/styles/index.css";
+
+import Layout from "@/layouts/layout.astro";
+import Header from "@/components/header.astro";
+import Hero from "@/components/hero.astro";
+import VideoSobreNosotros from "@/components/video-sobre-nosotros.astro";
+import Team from "@/components/team.astro";
+import InfoNosotros from "@/components/info-nosotros.astro";
+import Footer from "@/components/footer.astro";
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const SOBRE_NOSOTROS = i18n.SOBRE_NOSOTROS;
+---
+
+<Layout>
+  <Header/>
+  <Hero title={SOBRE_NOSOTROS.TITLE} description={SOBRE_NOSOTROS.DESCRIPTION}/>
+  <div class="bg-gradient-to-b from-[#0c0c0c] via-black to-[#0c0c0c]">
+    <VideoSobreNosotros/> 
+    <Team />
+  </div>
+   
+    <div class="space-y-24 px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
+      <InfoNosotros />
+    </div>
+    <Footer></Footer>
+</Layout>

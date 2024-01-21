@@ -1,42 +1,32 @@
 ---
-import { Image } from "astro:assets";
 import { Equipo } from "../constants/index";
 import Instagram from "./icons/instagram.astro";
 import Facebook from "./icons/face-book.astro";
 import X from "./icons/x.astro";
 import Linkedin from "./icons/linkedin.astro";
+import ContentSection from "./content-section.astro";
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const TEAM = i18n.TEAM;
 
 const team:any = Equipo[0].equipo;
 ---
+<ContentSection
+  title={TEAM.TITLE}
+  id="video-presentacion"
+  css="pt-16 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6"
+>
+  <Fragment slot="lead" set:html={TEAM.DESCRIPTION}></Fragment>
 
-<div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-  <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-    <h2
-      class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
-    >
-      Nuestro Equipo
-    </h2>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    </p>
-  </div>
-  <!--<div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">-->
-    <!--
-      <Image
-              class="mx-auto mb-2 w-[435px] h-[400px] rounded"
-              src={data.Imagen}
-              alt={data.Nombre}
-              width="435"
-              height="400"
-            />
-     -->
-  <div class="grid md:grid-cols-2 ">
+  <div class="grid md:grid-cols-2 w-full p-12">
     {Object.keys(team).map((miembro) => {
         const data = team[miembro];
         return (
         <div 
         style={{backgroundImage: `url(${data.Imagen})`}}
-        class="bg-cover bg-no-repeat h-[500px] w-[400px] flex flex-col justify-between mx-auto text-center w-auto bg-gray-700 border border-default bg-offset m-6 rounded-lg hover:scale-110 duration-300 hover:shadow-[0px_0px_15px_5px_rgb(217,159,39)]">
+        class="bg-cover bg-no-repeat h-[500px] w-[400px] flex flex-col justify-between mx-auto text-center bg-gray-700 border border-default bg-offset m-6 rounded-lg hover:scale-110 duration-300 hover:shadow-[0px_0px_15px_5px_rgb(217,159,39)]">
         <div class="bg-gray-800 p-2 opacity-70">
           <h3
           class="text-2xl font-bold tracking-tight text-gray-300"
@@ -89,4 +79,5 @@ const team:any = Equipo[0].equipo;
         </div>
         )})}
   </div>
-</div>
+  
+</ContentSection>

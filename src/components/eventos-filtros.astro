@@ -2,9 +2,19 @@
 import { Image } from "astro:assets";
 
 
-import { Eventos } from "../constants/index";
+import { Eventos as EventosData } from "../constants/index";
 
 const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+
+ const defaultLocale = 'es'; // Elige un idioma predeterminado
+const locale = currentLocale || defaultLocale; // Utiliza el idioma actual o el predeterminado si currentLocale es undefined
+
+
+const EventosDataForLocale = EventosData[locale]; // Ahora puedes estar seguro de que locale no es undefined
+
 ---
 
 <!-- Portfolio Two -->
@@ -19,21 +29,23 @@ const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
                 Todos
             </li>
             {
-                Eventos.map((evento: any) => {
+                EventosDataForLocale.map((evento: any, index:any) => {
                   return (
-                    <li class="filter" data-filter=`.${evento.id}` data-role="button" >
+                    <li class="filter" data-filter={`.${evento.id}`} data-role="button">
                         {evento.collection}
                     </li>
                   )
                 })
             }
+
+            
         </ul>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {
-          Eventos.flatMap((empresa) =>
-            empresa.eventos.map((evento) => {
+          EventosDataForLocale.map((empresa:any) => (
+            empresa.eventos.map((evento:any) => {
               const urlActual = Astro.request.url;
               const urlEvento = `${urlActual}${evento.url}`;
               return (
@@ -58,7 +70,7 @@ const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
                 </a>
               );
             })
-          )
+          ))
         }
       </div>
     </div>
@@ -100,42 +112,5 @@ const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
           }
       });
   });
-
- 
-  /*
-
-  // Asegurarse de que jQuery e Isotope estén cargados
-  (function($) {
-    // Inicializar Isotope para mampostería
-    function initSortableMasonry() {
-      if ($('.sortable-masonry').length) {
-        var $container = $('.sortable-masonry .items-container');
-        $container.isotope({
-          // Configuración inicial de Isotope
-          itemSelector: '.masonry-item',
-          masonry: {
-            columnWidth: '.masonry-item.col-lg-3'
-          }
-        });
-      }
-    }
-
-    // Inicializar Isotope al cargar
-    initSortableMasonry();
-
-    // Manejar clics en elementos li para filtrado
-    $('.filter-tabs li').on('click', function() {
-      // Cambiar clase 'active'
-      $('.filter-tabs li').removeClass('active');
-      $(this).addClass('active');
-
-      // Filtrar con Isotope
-      var filterValue = $(this).attr('data-filter');
-      $('.sortable-masonry .items-container').isotope({ filter: filterValue });
-    });
-
-  })(window as any.jQuery);
-
-*/
 
 </script>

@@ -5,8 +5,8 @@ import english from './en.json'
 
 
 const LANGUAGES = {
-  CATALAN: 'ca',
   SPANISH: 'es',
+  CATALAN: 'ca',
   ENGLISH: 'en'
 }
 
@@ -18,6 +18,6 @@ export const getI18N = ({
   if (currentLocale === LANGUAGES.SPANISH) return spanish
   if (currentLocale === LANGUAGES.CATALAN) return catalan
   if (currentLocale === LANGUAGES.ENGLISH) return english
-  
+
   return spanish
 }

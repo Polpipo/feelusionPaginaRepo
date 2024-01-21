@@ -11,5 +11,12 @@ export default defineConfig({
     ssr: {
       external: ["svgo"]
     }
+  },
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'ca', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    }
   }
 });

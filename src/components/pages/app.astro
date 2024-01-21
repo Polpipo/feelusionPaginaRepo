@@ -1,0 +1,27 @@
+---
+import "@/styles/index.css";
+
+import Layout from "@/layouts/layout.astro";
+import HeaderHomepage from "@/components/header-homepage.astro";
+import Splash from "@/components/splash.astro";
+import VideoPresentacion from "@/components/video-presentacion.astro";
+import Testimonios from "@/components/testimonios.astro";
+import NuestrosEventos from "@/components/nuestros-eventos.astro";
+import Features from "@/components/features.astro";
+import TimeLine from "@/components/TimeLine/time-line.astro";
+import Footer from "@/components/footer.astro";
+
+---
+
+<Layout>
+  <HeaderHomepage />
+  <Splash />
+  <div class="space-y-24 px-8 pt-12 md:pt-0 pb-12 bg-product bg-cover">
+    <VideoPresentacion />
+    <Testimonios />
+    <NuestrosEventos />
+    <Features />
+    <TimeLine />
+  </div>
+  <Footer/>
+</Layout>

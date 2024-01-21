@@ -7,24 +7,23 @@ import {
 } from "react-google-recaptcha-v3";
 
 type ContactFormProps = {
-  /*contactFormData: {
+  contactFormData: {
     TITLE: string;
     FORM_CONTENT: string;
     NAME: string;
     SURNAME: string;
     EMAIL: string;
+    OPTION: string;
     TELEPHONE: string;
     MESSAGE: string;
     PRIVACY_1: string;
     PRIVACY_2: string;
     SEND: string;
-  },*/
+  },
   language: string | undefined;
 };
 
-const ContactForm: React.FC<ContactFormProps> = ({
-  language /*, contactFormData*/,
-}) => {
+const ContactForm: React.FC<ContactFormProps> = ({ language, contactFormData }) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isPolicyAccepted, setIsPolicyAccepted] = useState(false);
   const [shakePolicyButton, setShakePolicyButton] = useState(false);
@@ -146,8 +145,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
       <div className="isolate bg-gray-200 bg-gradient-to-b from-[#0c0c0c] from-0% via-gray-600 via-30% to-gray-500 to-50% py-12 px-4">
         
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-yellow-500 sm:text-4xl">
-            TITULO FORM
+          <h2 className="text-3xl uppercase font-bold tracking-tight text-yellow-500 sm:text-4xl">
+            {contactFormData.TITLE}
           </h2>
         </div>
         <form
@@ -164,7 +163,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   htmlFor="first-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Nombre
+                  {contactFormData.NAME}
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -183,7 +182,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   htmlFor="last-name"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Apellidos
+                  {contactFormData.SURNAME}
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -202,7 +201,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Email
+                  {contactFormData.EMAIL}
                 </label>
                 <div className="mt-2.5">
                   <input
@@ -221,7 +220,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   htmlFor="phone-number"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Telefono
+                  {contactFormData.TELEPHONE}
                 </label>
                 <div className="relative mt-2.5">
                   <div className="absolute inset-y-0 left-0 flex items-center">
@@ -231,11 +230,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     <select
                       id="country"
                       name="country"
-                      className="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-2 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+                      className="h-full uppercase rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-2 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                       onChange={handlePrefixChange}
                     >
                       <option value="+34">ES (+34)</option>
-                      <option value="OTRO -->">OTRO</option>
+                      <option value="OTRO -->">{contactFormData.OPTION}</option>
                     </select>
                   </div>
                   <input
@@ -254,7 +253,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   htmlFor="message"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
-                  Mensaje
+                  {contactFormData.MESSAGE}
                 </label>
                 <div className="mt-2.5">
                   <textarea
@@ -296,7 +295,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   className="text-sm leading-6 text-gray-600"
                   id="switch-1-label"
                 >
-                  <span> Aceptas nuestra </span>
+                  <span> {contactFormData.PRIVACY_1} </span>
                   <a
                     href={
                       language === "es"
@@ -305,7 +304,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                     }
                     className="font-semibold text-amber-500 hover:text-amber-600"
                   >
-                    Política de Privacidad
+                    {contactFormData.PRIVACY_2}
                   </a>
                 </label>
               </div>
@@ -330,7 +329,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               type="submit"
               className="block w-full rounded-md bg-amber-500 duration-300 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
-              Enviar
+              {contactFormData.SEND}
             </button>
             
           </div>

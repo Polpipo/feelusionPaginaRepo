@@ -2,11 +2,16 @@
 import HeroImage from "@/components/hero-image.astro";
 import 'animate.css';
 
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const SPLASH = i18n.SPLASH;
+
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
-<section class="relative h-full bg-black">
+<section class="relative h-screen bg-black">
   <!-- <Starfield /> -->
   <!-- <GitHubCorner /> -->
   <div
@@ -40,14 +45,14 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     <h3
       class="mt-16 w-80 md:w-96 lg:w-[700px] text-center font-bold text-wrap-pretty text-2xl font-Montserrat"
     >
-    Organización y gestión de <br><span class="text-primary">eventos para emprendedores</span>
+    {SPLASH.DESCRIPTION_1}<br><span class="text-primary">{SPLASH.DESCRIPTION_2}</span>
     </h3>
     <a
       
       rel="noopener noreferrer"
       href="/sobre-nosotros"
-      class="mt-10 hover:text-white rounded-full w-72 text-center py-4 font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-600 to-yellow-800 hover:scale-110"
-      >AGENDAR LLAMADA</a
+      class="mt-10 uppercase hover:text-white rounded-full w-72 text-center py-4 font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-600 to-yellow-800 hover:scale-110"
+      >{SPLASH.BUTTON}</a
     >
     <!-- <div
       id="astronaut"

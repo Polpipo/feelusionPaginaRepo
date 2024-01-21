@@ -3,10 +3,15 @@ import ContentSection from "@/components/content-section.astro";
 import VideoEventoTengoUnPlan1 from "@/assets/eventos-feelusion/Evento_TengoUnPlan_PrimeraEdicion.mp4";
 import VideoEventoTengoUnPlan2 from "@/assets/eventos-feelusion/videoSegundaEdicion.mp4";
 import VideoExperienciaDavidTuru from "@/assets/eventos-feelusion/Experiencia_Paintball.mp4";
+
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const NUESTROS_EVENTOS = i18n.NUESTROS_EVENTOS;
 ---
 
 <ContentSection
-  title="Nuestros eventos"
+  title={NUESTROS_EVENTOS.TITLE}
   id="nuestros-eventos"
   estilo="lg:mt-16"
 >
@@ -22,7 +27,7 @@ import VideoExperienciaDavidTuru from "@/assets/eventos-feelusion/Experiencia_Pa
           <h3
             class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
           >
-            Podcast en directo
+            {NUESTROS_EVENTOS.TITLE_1}
           </h3>
           <video
             id="evento-TUP1"
@@ -39,7 +44,7 @@ import VideoExperienciaDavidTuru from "@/assets/eventos-feelusion/Experiencia_Pa
           <h3
             class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
           >
-            Eventos de alto impacto
+            {NUESTROS_EVENTOS.TITLE_2}
           </h3>
           <video
             id="evento-TUP2"
@@ -56,7 +61,7 @@ import VideoExperienciaDavidTuru from "@/assets/eventos-feelusion/Experiencia_Pa
           <h3
             class="text-center font-extrabold text-xl p-2 hover:scale-110 duration-300"
           >
-            Experiencias
+            {NUESTROS_EVENTOS.TITLE_3}
           </h3>
           <video
             id="evento-DavidTuru"
@@ -76,8 +81,8 @@ import VideoExperienciaDavidTuru from "@/assets/eventos-feelusion/Experiencia_Pa
         href="https://docs.google.com/forms/d/e/1FAIpQLSfjYNuh1_sX66Bujs5HlaoJSuSMJ6kYkM2xcQqYA91WuP8u6A/viewform"
       >
         <button
-          class="rounded-full w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
-          >TRABAJA CON NOSOTROS</button
+          class="rounded-full uppercase w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
+          >{NUESTROS_EVENTOS.BUTTON}</button
         >
       </a>
     </div>

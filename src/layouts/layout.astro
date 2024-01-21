@@ -7,13 +7,20 @@ import Footer from "@/components/footer.astro";
 
 import { GoogleAnalytics } from 'astro-google-analytics';
 
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const SEO_TITLE = i18n.SEO_TITLE
+const SEO_DESCRIPTION = i18n.SEO_DESCRIPTION
+
 
 const { generator } = Astro;
 const site = "https://www.feelusion.com/";
 const imagePath = "https://www.feelusion.com/feelusionLogo.png";
 const image = new URL(imagePath).toString();
-const description =
-  "Organización y gestión de eventos para emprendedores"
+const title = SEO_TITLE
+const description = SEO_DESCRIPTION
+
 
 ---
 
@@ -28,7 +35,7 @@ const description =
 
     <GoogleAnalytics id="G-TN7S6CZBCC" />
     
-    <title>Feelusion</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -39,7 +46,7 @@ const description =
     <meta property="og:url" content={site} />
 
     <!-- twitter -->
-    <meta name="twitter:title" content="Feelusion">
+    <meta name="twitter:title" content={title}>
     <meta name="twitter:description" content={description}>
     <meta name="twitter:image" content={image}>
     <meta name="twitter:card" content="summary_large_image" />
@@ -48,7 +55,7 @@ const description =
     <meta name="robots" content="index, follow" />
 
     <!-- Configuración de idioma -->
-    <meta name="language" content="es" />
+    <meta name="language" content={currentLocale} />
 
     <link
       rel="preload"

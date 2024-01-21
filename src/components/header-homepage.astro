@@ -6,15 +6,6 @@ import type { NavItem } from "@/types";
 import Logo from "@/assets/logo.png";
 import Instagram from "@/assets/Instagram.png";
 
-const navItems: Array<NavItem> = [
-  { title: "Inicio", url: "/" },
-  { title: "Sobre Nosotros", url: "/sobre-nosotros" },
-  { title: "Casos de éxito", url: "/casos-exito" },
-  { title: "Nuestros eventos", url: "/eventos" },
-  { title: "Nuestro servicio", url: "/servicio" },
-  { title: "Contacto", url: "/contacto" },
-];
-
 import { getI18N } from "@/i18n";
 /*
 const url = new URL(Astro.request.url);
@@ -32,7 +23,23 @@ if (url.pathname.startsWith('/en/')) {
 */
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
-const ABOUT = i18n.ABOUT;
+const HEADER = i18n.HEADER;
+
+const Inicio = HEADER.HEADER_1
+const SobreNosotros = HEADER.HEADER_2
+const CasosExito = HEADER.HEADER_3
+const NuestrosEventos = HEADER.HEADER_4
+const NuestroServicio = HEADER.HEADER_5
+const Contacto = HEADER.HEADER_6
+
+const navItems: Array<NavItem> = [
+  { title: Inicio, url: "/" },
+  { title: SobreNosotros, url: "/sobre-nosotros" },
+  { title: CasosExito, url: "/casos-exito" },
+  { title: NuestrosEventos, url: "/eventos" },
+  { title: NuestroServicio, url: "/servicio" },
+  { title: Contacto, url: "/contacto" },
+];
 ---
 
 <header
@@ -40,8 +47,7 @@ const ABOUT = i18n.ABOUT;
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <h1 class="sr-only">
-    Feelusion, Eventos para Emprendedores. Creamos experiencias para conectar
-    con tu comunidad
+    {i18n.SEO_DESCRIPTION}
   </h1>
   <a
     class="instagram flex items-center gap-3 hover:!text-default flex items-center gap-3 hover:!text-default transition-all transform hover:scale-110 duration-300"

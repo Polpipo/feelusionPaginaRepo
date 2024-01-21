@@ -1,129 +1,126 @@
 {
-    "SEO_TITLE": "SPAI HOME MODULARES",
-    "SEO_DESCRIPTION": "Empresa de construcción de casas modulares",
+    "SEO_TITLE": "Feelusion",
+    "SEO_DESCRIPTION": "Feelusion, Eventos para Emprendedores. Creamos experiencias para conectarcon tu comunidad",
     "HEADER":{
         "HEADER_1": "Inicio",
-        "HEADER_2": "Sistemas",
-        "HEADER_3": "Galería",
-        "HEADER_4": "Contacto",
-        "BUTTON": "Contáctanos"
+        "HEADER_2": "Sobre Nosotros",
+        "HEADER_3": "Casos de éxito",
+        "HEADER_4": "Nuestros eventos",
+        "HEADER_5": "Nuestro servicio",
+        "HEADER_6": "Contacto"
     },
     "SPLASH":{
-        "TITLE_1": "Creamos",
-        "TITLE_2": "Hogares eficientes"
-
+        "DESCRIPTION_1": "Organización y gestión de",
+        "DESCRIPTION_2": "eventos para emprendedores",
+        "BUTTON": "Agendar llamada"
     },
-    "HISTORY_MISSION_VISION":{
-        "SUBTITLE": "Nuestros valores",
-        "TITLE": "Quiénes somos",
-        "TITLE_1": "Experiencia",
-        "TITLE_2": "Compromiso",
-        "TITLE_3": "Visión",
-        "P_1_1": "SPAI HOME es una empresa especializada en vivienda prefabricada donde confluyen los conocimientos adquiridos por sus integrantes durante más de 20 años en el sector de la construcción residencial.",
-        "P_1_2": "Pudiendo ofrecer de esta manera nuestra amplia experiencia en este campo.",
-        "P_2_1": "Como contratistas generales supervisamos proyectos de construcción y/o renovación en los sectores comerciales y residenciales.",
-        "P_2_2": "La combinación de nuestra experiencia y eficacia garantiza a nuestros clientes un servicio de calidad y una completa satisfacción con los resultados finales.",
-        "P_3_1": "Estamos comprometidos con la mejora continua, buscando siempre superar las expectativas y dejar un legado duradero en el mundo de la construcción.",
-        "P_3_2": ""
+    "VIDEO_PRESENTACION":{
+        "TITLE": "¿Por qué nosotros?",
+        "DESCRIPTION_1": "<span class='text-md'>La gente <span class='text-primary'>olvidará</span> lo que <spanclass='text-primary'>dijiste</spanclass=>,<br /> pero <span class='text-primary'>nunca olvidará</span> cómo le hiciste <span class='text-primary'>sentir</span></span>",
+        "BUTTON": "Trabaja con nosotros"
     },
-    "GALLERY":{
-        "IMG_1": "Adosados",
-        "IMG_2": "Centros Comerciales",
-        "IMG_3": "Comerciales",
-        "IMG_4": "De diseño",
-        "IMG_5": "Hogares personalizados",
-        "IMG_6": "Oficinas",
-        "IMG_7": "Residenciales",
-        "IMG_8": "Viviendas clásicas"
+    "TESTIMONIOS":{
+        "TITLE": "Casos de éxito",
+        "TITLE_1": "Tengo un plan",
+        "BUTTON_1": "Trabaja con nosotros",
+        "TITLE_2": "David Tevosyan",
+        "BUTTON_2": "Reserva llamada"
+    },
+    "NUESTROS_EVENTOS":{
+        "TITLE": "Nuestros eventos",
+        "TITLE_1": "Podcast en directo",
+        "TITLE_2": "Eventos de alto impacto",
+        "TITLE_3": "Experiencias",
+        "BUTTON": "Trabaja con nosotros"
+    },
+    "FEATURES":{
+        "TITLE": "¿Qué esperar de nuestro servicio?",
+        "DESCRIPTION": "<span class='text-primary'>Despreocupate</span> de la organización de tus eventos. Centrate en lo realmente <span class='text-primary'>importante para tu comunidad</span>.",
+        "TITLE_1": "Asesoramiento",
+        "DESCRIPTION_1": "Enfoque completamente personalizado y seguimiento continuo para cubrir tus necesidades y deseos",
+        "TITLE_2": "Coordinación",
+        "DESCRIPTION_2": "Búsqueda exhaustiva de proveedores y espacios, con la mejor relación calidad-precio",
+        "TITLE_3": "Estrategia",
+        "DESCRIPTION_3": "Comparativa de precios enfocada siempre en la opción más óptima según tus necesidades",
+        "TITLE_4": "Planificación",
+        "DESCRIPTION_4": "Definición del plan de acción individualizado. Propuesta de dinámicas",
+        "TITLE_5": "Branding",
+        "DESCRIPTION_5": "Diseñamos los creativos y branding en general de tu evento para diferenciarte de los demás",
+        "TITLE_6": "Ejecución",
+        "DESCRIPTION_6": "Dirigiremos y coordinaremos presencialmente tu evento para que todo salga según lo planeado",
+        "BUTTON": "Contacta con nosotros"
     },
     "TIMELINE":{
-        "TITLE": "Paso a Paso",
+        "TITLE": "El paso a paso",
+        "DESCRIPTION": "Creamos <span class='text-primary'>momentos inolvidables</span>. Imagina, diseña y <span class='text-primary'><br>celebra con nosotros</span>.",
         "PASO_1": "Paso 1",
-        "PASO_1_TITLE": "Asesorar",
-        "PASO_1_CONTENT": "Nos dedicamos a la construcción modular y eficiente con la finalidad de acortar al máximo los plazos de entrega",
+        "PASO_1_TITLE": "Consulta inicial",
+        "PASO_1_CONTENT": "Reunión con nosotros para definir el objetivo y propósito del evento o experiencia presencial",
         "PASO_2": "Paso 2",
-        "PASO_2_TITLE": "Guiar",
-        "PASO_2_CONTENT": "Nuestro equipo está aquí para asegurarse de aumentar la calidad final del producto y reducir la huella medioambiental derivada del consumo de energía necesaria para la futura climatización de la vivienda",
+        "PASO_2_TITLE": "Propuesta Personalizada",
+        "PASO_2_CONTENT": "Creamos una propuesta adaptada a tus expectativas y las de tu comunidad",
         "PASO_3": "Paso 3",
-        "PASO_3_TITLE": "Gestionar",
-        "PASO_3_CONTENT": "Nosotros nos ocuparemos. Enfoque completamente personalizado y seguimiento continuo para cubrir tus necesidades"
+        "PASO_3_TITLE": "Asesoramiento",
+        "PASO_3_CONTENT": "Enfoque completamente personalizado y seguimiento continuo para cubrir tus necesidades y deseos",
+        "PASO_4": "Paso 4",
+        "PASO_4_TITLE": "Gestión Logística",
+        "PASO_4_CONTENT": "Búsqueda exhaustiva de proveedores y espacios con la mejor relación calidad-precio",
+        "PASO_5": "Paso 5",
+        "PASO_5_TITLE": "Hosting de la Experiencia",
+        "PASO_5_CONTENT": "Dirigiremos y coordinaremos presencialmente tu evento para que todo salga según lo planeado.",
+        "BUTTON": "Crea tu experiencia"
     },
-    "SERVICES":{
-        "SERVICE_1": "Reducción de equipos de obra",
-        "SERVICE_1_CONTENT": "Es tipo de construcción obliga a utilizar la misma mano de obra especializada para la mayor parte de las fases de la obra.<br/>Sobre todo en el montaje de la envolvente de la vivienda.",
-        "SERVICE_2": "Reducción de costes",
-        "SERVICE_2_CONTENT": "Al reducir el tiempo de ejecución de la obra también se reducen los gastos directos e indirectos.",
-        "SERVICE_3": "Elementos con mayor resistencia",
-        "SERVICE_3_CONTENT": "Se consiguen estructuras monolíticas que mejoran sustancialmente la estabilidad de todo el conjunto.",
-        "SERVICE_4": "Reducción del consumo energético",
-        "SERVICE_4_CONTENT": "Sistemas prefabricados aumentan grosor aislante, mejorando térmica y acústica en viviendas. <br/>Tanto en fachadas como en cubiertas se consigue doblar el grueso del aislamiento térmico utilizado normalmente en la construcción tradicional.",
-        "SERVICE_5": "Calidad en la producción",
-        "SERVICE_5_CONTENT": "El control riguroso en la fabricación de materiales prefabricados, mediante dosificación precisa y tecnología de control numérico, garantiza una calidad superior y reduce los residuos. Esto asegura un ajuste perfecto en obra, superando los métodos tradicionales y minimizando el factor humano.",
-        "SERVICE_6": "Reducción en los plazos de ejecución",
-        "SERVICE_6_CONTENT": "La producción en serie acelera la fabricación y ensamblaje en obra, eliminando tiempos muertos y siguiendo una metodología de ejecución eficiente basada en planos de montaje detallados"
+    "FOOTER":{
+        "CONTENT_1": "© 2024 ",
+        "CONTENT_2": "Feelusion™",
+        "CONTENT_3": ". Todos los derechos reservados.",
+        "MENU_1": "Política de Privacidad",
+        "MENU_2": "Aviso Legal",
+        "MENU_3": "Contacto"
     },
     "FORM":{
-        "HERO": "Formulario de contacto",
-        "TITLE": "Envíanos tu mensaje",
+        "TITLE_HERO": "Contacto",
+        "CONTENT_HERO": "¡No dudes en preguntar!",
+        "TITLE": "Formulario de contacto",
         "FORM_CONTENT": "Si tienes alguna pregunta acerca de nuestros productos o servicios, por favor rellena el siguiente formulario y en breve nos pondremos en contacto contigo. También nos puedes llamar en horarios de oficina.",
         "NAME": "Nombre",
         "SURNAME": "Apellidos",
         "EMAIL": "Email",
+        "OPTION": "Otro",
         "TELEPHONE": "Número de Teléfono",
         "MESSAGE": "Mensaje",
         "PRIVACY_1": "Aceptas nuestra",
         "PRIVACY_2": "Política de Privacidad",
         "SEND": "Enviar"
     },
-    "CONTACT_INFO":{
-        "TITLE_1": "Contacto",
-        "CONTENT_1_1": "Teléfono: ",
-        "CONTENT_1_2": "Correo: ",
-        "TITLE_2": "Horario de apertura",
-        "CONTENT_2_1_1": "Lun - Vie: ",
-        "CONTENT_2_1_2": "9:00h - 17:00h",
-        "CONTENT_2_2_1": "Sab - Dom: ",
-        "CONTENT_2_2_2": "Cerrado",
-        "TITLE_3": "¿Dónde estamos?",
-        "CONTENT_3": "Calle Major 40, <br> 08221 Terrassa (Barcelona), <br>Spain"
+    "SOBRE_NOSOTROS":{
+        "TITLE": "¿Por qué nosotros?",
+        "DESCRIPTION": "Descubre cómo trabajamos y qué podemos hacer por ti",
+        "BUTTON": "Trabaja con nosotros"
     },
-    "FOOTER":{
-        "CONTENT_1": "© 2024 ",
-        "CONTENT_2": "Spai Home™",
-        "CONTENT_3": ". Todos los derechos reservados.",
-        "MENU_1": "Política de Privacidad",
-        "MENU_2": "Aviso Legal",
-        "MENU_3": "Contacto"
+    "TEAM":{
+        "TITLE": "Nuestro equipo",
+        "DESCRIPTION": "<span class='text-md'> <span class='text-primary'>Conócenos</span></br> mucho más <span class='text-primary'>a fondo</span></span>"
     },
-    "ABOUT": {
-        "TITLE": "Sistemas Constructivos",
-        "DESCRIPTION": "Tenemos diferentes maneras de construir. ¡Descubre más sobre ellas!",        
-        "TITLE_1": "Entramado Ligero",
-        "CONTENT_1": "<p><strong>El entramado ligero de madera</strong> se caracteriza por la utilización de elementos estructurales esbeltos de madera tratada</strong>, combinados con materiales de aislamiento térmico, impermeabilización, división, fijación y de acabado. Es un <strong>sistema estructural común en arquitectura residencial</strong>.</p>\n\n<p>Estas estructuras se componen de <strong>montantes</strong> (separados entre 40 o 60 centímetros) y <strong>durmientes de madera</strong>, formando paneles premontados que incorporan aislamiento térmico e impermeabilización. El montaje se realiza sobre cimentación de hormigón, ofreciendo la ventaja de cargas menores comparadas con la obra húmeda tradicional.</p>\n\n<p>Los <strong>cerramientos exteriores y divisiones interiores</strong> suelen emplear diversos tipos de paneles fijados a la estructura de madera. Los <strong>acabados exteriores</strong> admiten una gran diversidad de materiales, incluyendo placas cementosas, revocos, SATE, fachadas ventiladas y terminaciones tradicionales como ladrillo, piedra y otros acabados cerámicos. Con el uso de elementos estructurales de madera como vigas, el acabado interior de los techos suele ser la propia estructura.</p>\n\n<p>Las instalaciones se realizan por el <strong>trasdosado interior</strong> de la fachada y el falso techo bajo las cubiertas, disminuyendo los tiempos de instalación y facilitando futuras reparaciones o modificaciones.</p>\n\n<p>En el trasdosado interior y paredes divisorias se añaden <strong>capas adicionales de material aislante</strong>, mejorando el aislamiento térmico y acústico, lo que contribuye a un <strong>mayor confort interior y eficiencia energética</strong>.</p>\n\n<p>Finalmente, los <strong>materiales usados para los acabados exteriores e interiores</strong> pueden ser los mismos que en la construcción tradicional, ofreciendo flexibilidad en el diseño y la estética.</p>",
-        "TITLE_2": "Paneles CLT",
-        "CONTENT_2": "<p> Las estructuras de madera denominadas <strong >“CLT” (Cross Laminated Timber)</strong > o Panel Contralaminado de Madera, son paneles hechos de capas de madera maciza de diferentes grosores, listonadas y encoladas. Este tipo de estructura es común en <strong >arquitectura residencial</strong >, combinándose con materiales como aislamientos térmicos y de impermeabilización. </p> <p> El panel de madera maciza ofrece <strong >propiedades térmicas y acústicas excelentes</strong >, contribuyendo a una vivienda sostenible, ecológica, con prestaciones estructurales sobresalientes, interiores agradables y <strong>resistencia al fuego</strong>. </p> <p> Estas estructuras de madera se utilizan en <strong >fachadas, forjados y cubiertas</strong > (estructuras verticales, horizontales e inclinadas). El montaje sobre cimentación de hormigón y el uso de fijaciones especiales permiten que las cargas sean menores que en la obra húmeda tradicional. </p> <p> Las <strong>divisiones interiores</strong> suelen emplear el mismo tipo de panel de diferentes grosores. Para los <strong >acabados exteriores</strong >, el sistema admite una amplia variedad de materiales, incluyendo placas cementosas, revocos, SATE y fachadas ventiladas. </p> <p> Las instalaciones se realizan por el <strong >trasdosado interior</strong > de la fachada y el falso techo bajo los forjados y cubiertas, lo cual reduce los tiempos de instalación y facilita futuras reparaciones o modificaciones. </p> <p> En casos donde el acabado interior se realiza mediante trasdosado de cartón-yeso, se aprovecha para añadir <strong >capas adicionales de material aislante</strong >, aumentando así el nivel de aislamiento térmico y acústico. </p> <p> En estas estructuras, los materiales para los <strong >acabados exteriores e interiores</strong > pueden ser los mismos que en la construcción tradicional, pero suele predominar el acabado de <strong >madera de la propia estructura</strong >. </p>",
-        "TITLE_3": "Acero Reforzado",
-        "CONTENT_3": "<p> <strong>El steel framing</strong> es un sistema constructivo estructural industrializado que utiliza <strong >perfiles estructurales de acero galvanizado liviano</strong >, en combinación con otros materiales de aislamiento térmico, impermeabilización y acabado. Se propone principalmente para <strong >arquitectura residencial</strong >. </p> <p> Las estructuras de steel framing se componen de perfiles de chapa de acero galvanizado, generalmente separados cada 40 o 60 centímetros. El montaje se realiza sobre cimentación de hormigón, con la ventaja de que las <strong>cargas son mucho menores</strong > que en la obra húmeda tradicional. Esta estructura puede montarse perfil a perfil en obra o ensamblando paneles premontados en fábrica. </p> <p> Dentro del steel framing, existen variantes que utilizan <strong >perfilería galvanizada de mayor grosor</strong > con perforaciones de fábrica, permitiendo el ensamblaje de estructuras prefabricadas y el paso de instalaciones. Esto permite distanciar los elementos estructurales respecto al sistema steel framing ligero, ofreciendo <strong>gran resistencia y durabilidad</strong>. </p> <p> En cuanto a los acabados, tanto exteriores como interiores, se pueden utilizar los mismos materiales y sistemas que en el caso del steel framing ligero. </p>",
-        "TITLE_4": "Panelado Hormigón",
-        "CONTENT_4": "<p> Las <strong>estructuras de hormigón prefabricado</strong> utilizan paneles de grandes dimensiones para la estructura o la envolvente, con variaciones en el grosor de los paneles y la incorporación de pilares según sea necesario. Este material permite crear <strong >grandes espacios diáfanos</strong >, destacando por su resistencia y durabilidad. </p> <p> Este tipo de estructura se complementa con materiales para aislamiento térmico, impermeabilización, división, fijación y acabado, con algunos paneles incorporando un núcleo aislante. Es un sistema estructural ampliamente utilizado en <strong >arquitectura residencial</strong >. </p> <p> Los paneles de hormigón se emplean en <strong >fachadas, forjados y cubiertas</strong > (estructuras verticales, horizontales e inclinadas), montándose sobre cimentación de hormigón y ensamblando diferentes tipos de paneles en las distintas plantas. </p> <p> Las <strong>divisiones interiores</strong> suelen utilizar el mismo tipo de panel. Para los <strong>acabados exteriores</strong>, este sistema admite una gran diversidad de materiales como placas cementosas, revocos, SATE y fachadas ventiladas. </p> <p> Las instalaciones se realizan por el trasdosado interior de las fachadas y el falso techo bajo forjados y cubiertas, lo que <strong >reduce los tiempos de instalación</strong > y facilita futuras reparaciones o modificaciones. </p> <p> En casos donde el acabado interior se realiza con trasdosado de cartón-yeso, se colocan capas adicionales de material aislante para mejorar el <strong>aislamiento térmico y acústico</strong> </p> <p> En este tipo de estructuras los materiales utilizados para realizar los acabados exteriores e interiores pueden ser los mismos que en construcción tradicional pero en muchos casos la propia superficie del hormigón queda vista. </p>",
-        "BUTTON": "Contáctanos"
+    "INFO_NOSOTROS":{
+        "DESCRIPTION_FERREIRA": "Descripción breve Ferreira. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facilis ipsum reprehenderit iure quia! Accusantium nisi fugit earum fugaut aut dicta.",
+        "DESCRIPTION_SANDRA": "Descripción breve Sandra. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facilis ipsum reprehenderit iure quia! Accusantium nisi fugit earum fugaut aut dicta. ",
+        "BUTTON": "Contacta con nosotros"
     },
-    "SYSTEMS_GALLERY": {
-        "TITLE": "Galería",
-        "DESCRIPTION": "Te ofrecemos una muestra de lo que hacemos y algunos de los proyectos en los que hemos estado trabajando.",        
-        "TITLE_1": "Entramado Ligero",
-        "CONTENT_1": "<p><strong>El entramado ligero de madera</strong> se caracteriza por la utilización de elementos estructurales esbeltos de madera tratada</strong>, combinados con materiales de aislamiento térmico, impermeabilización, división, fijación y de acabado. Es un <strong>sistema estructural común en arquitectura residencial</strong>.</p>\n\n<p>Estas estructuras se componen de <strong>montantes</strong> (separados entre 40 o 60 centímetros) y <strong>durmientes de madera</strong>, formando paneles premontados que incorporan aislamiento térmico e impermeabilización. El montaje se realiza sobre cimentación de hormigón, ofreciendo la ventaja de cargas menores comparadas con la obra húmeda tradicional.</p>\n\n<p>Los <strong>cerramientos exteriores y divisiones interiores</strong> suelen emplear diversos tipos de paneles fijados a la estructura de madera. Los <strong>acabados exteriores</strong> admiten una gran diversidad de materiales, incluyendo placas cementosas, revocos, SATE, fachadas ventiladas y terminaciones tradicionales como ladrillo, piedra y otros acabados cerámicos. Con el uso de elementos estructurales de madera como vigas, el acabado interior de los techos suele ser la propia estructura.</p>\n\n<p>Las instalaciones se realizan por el <strong>trasdosado interior</strong> de la fachada y el falso techo bajo las cubiertas, disminuyendo los tiempos de instalación y facilitando futuras reparaciones o modificaciones.</p>\n\n<p>En el trasdosado interior y paredes divisorias se añaden <strong>capas adicionales de material aislante</strong>, mejorando el aislamiento térmico y acústico, lo que contribuye a un <strong>mayor confort interior y eficiencia energética</strong>.</p>\n\n<p>Finalmente, los <strong>materiales usados para los acabados exteriores e interiores</strong> pueden ser los mismos que en la construcción tradicional, ofreciendo flexibilidad en el diseño y la estética.</p>",
-        "TITLE_2": "Paneles CLT",
-        "CONTENT_2": "<p> Las estructuras de madera denominadas <strong >“CLT” (Cross Laminated Timber)</strong > o Panel Contralaminado de Madera, son paneles hechos de capas de madera maciza de diferentes grosores, listonadas y encoladas. Este tipo de estructura es común en <strong >arquitectura residencial</strong >, combinándose con materiales como aislamientos térmicos y de impermeabilización. </p> <p> El panel de madera maciza ofrece <strong >propiedades térmicas y acústicas excelentes</strong >, contribuyendo a una vivienda sostenible, ecológica, con prestaciones estructurales sobresalientes, interiores agradables y <strong>resistencia al fuego</strong>. </p> <p> Estas estructuras de madera se utilizan en <strong >fachadas, forjados y cubiertas</strong > (estructuras verticales, horizontales e inclinadas). El montaje sobre cimentación de hormigón y el uso de fijaciones especiales permiten que las cargas sean menores que en la obra húmeda tradicional. </p> <p> Las <strong>divisiones interiores</strong> suelen emplear el mismo tipo de panel de diferentes grosores. Para los <strong >acabados exteriores</strong >, el sistema admite una amplia variedad de materiales, incluyendo placas cementosas, revocos, SATE y fachadas ventiladas. </p> <p> Las instalaciones se realizan por el <strong >trasdosado interior</strong > de la fachada y el falso techo bajo los forjados y cubiertas, lo cual reduce los tiempos de instalación y facilita futuras reparaciones o modificaciones. </p> <p> En casos donde el acabado interior se realiza mediante trasdosado de cartón-yeso, se aprovecha para añadir <strong >capas adicionales de material aislante</strong >, aumentando así el nivel de aislamiento térmico y acústico. </p> <p> En estas estructuras, los materiales para los <strong >acabados exteriores e interiores</strong > pueden ser los mismos que en la construcción tradicional, pero suele predominar el acabado de <strong >madera de la propia estructura</strong >. </p>",
-        "TITLE_3": "Acero Reforzado",
-        "CONTENT_3": "<p> <strong>El steel framing</strong> es un sistema constructivo estructural industrializado que utiliza <strong >perfiles estructurales de acero galvanizado liviano</strong >, en combinación con otros materiales de aislamiento térmico, impermeabilización y acabado. Se propone principalmente para <strong >arquitectura residencial</strong >. </p> <p> Las estructuras de steel framing se componen de perfiles de chapa de acero galvanizado, generalmente separados cada 40 o 60 centímetros. El montaje se realiza sobre cimentación de hormigón, con la ventaja de que las <strong>cargas son mucho menores</strong > que en la obra húmeda tradicional. Esta estructura puede montarse perfil a perfil en obra o ensamblando paneles premontados en fábrica. </p> <p> Dentro del steel framing, existen variantes que utilizan <strong >perfilería galvanizada de mayor grosor</strong > con perforaciones de fábrica, permitiendo el ensamblaje de estructuras prefabricadas y el paso de instalaciones. Esto permite distanciar los elementos estructurales respecto al sistema steel framing ligero, ofreciendo <strong>gran resistencia y durabilidad</strong>. </p> <p> En cuanto a los acabados, tanto exteriores como interiores, se pueden utilizar los mismos materiales y sistemas que en el caso del steel framing ligero. </p>",
-        "TITLE_4": "Panelado Hormigón",
-        "CONTENT_4": "<p> Las <strong>estructuras de hormigón prefabricado</strong> utilizan paneles de grandes dimensiones para la estructura o la envolvente, con variaciones en el grosor de los paneles y la incorporación de pilares según sea necesario. Este material permite crear <strong >grandes espacios diáfanos</strong >, destacando por su resistencia y durabilidad. </p> <p> Este tipo de estructura se complementa con materiales para aislamiento térmico, impermeabilización, división, fijación y acabado, con algunos paneles incorporando un núcleo aislante. Es un sistema estructural ampliamente utilizado en <strong >arquitectura residencial</strong >. </p> <p> Los paneles de hormigón se emplean en <strong >fachadas, forjados y cubiertas</strong > (estructuras verticales, horizontales e inclinadas), montándose sobre cimentación de hormigón y ensamblando diferentes tipos de paneles en las distintas plantas. </p> <p> Las <strong>divisiones interiores</strong> suelen utilizar el mismo tipo de panel. Para los <strong>acabados exteriores</strong>, este sistema admite una gran diversidad de materiales como placas cementosas, revocos, SATE y fachadas ventiladas. </p> <p> Las instalaciones se realizan por el trasdosado interior de las fachadas y el falso techo bajo forjados y cubiertas, lo que <strong >reduce los tiempos de instalación</strong > y facilita futuras reparaciones o modificaciones. </p> <p> En casos donde el acabado interior se realiza con trasdosado de cartón-yeso, se colocan capas adicionales de material aislante para mejorar el <strong>aislamiento térmico y acústico</strong> </p> <p> En este tipo de estructuras los materiales utilizados para realizar los acabados exteriores e interiores pueden ser los mismos que en construcción tradicional pero en muchos casos la propia superficie del hormigón queda vista. </p>",
-        "BUTTON": "Contáctanos"
+    "CASOS_EXITO":{
+        "TITLE": "Casos de éxito",
+        "DESCRIPTION": "Emprendedores con los que hemos trabajado"
     },
-    "DONDE_ESTAMOS": {
-        "DIRECCION": "Calle Major 40, Terrassa, Barcelona",
-        "DIRECCION_HTML": "<b>Encuentranos en:</b><br> Calle Major 40, <br>Terrassa"
+    "SERVICIO":{
+        "TITLE": "Nuestro servicio",
+        "DESCRIPTION": "¿Qué te ofrecemos?"
+    },
+    "HERO":{
+        "BUTTON": "Contacto"
+    },
+    "EVENTOS":{
+        "TITLE": "Nuestros eventos",
+        "DESCRIPTION": "Empresas con las que hemos trabajado"
     },
     "POLITICA_PRIVACIDAD": {
         "TITLE": "Política de Privacidad",

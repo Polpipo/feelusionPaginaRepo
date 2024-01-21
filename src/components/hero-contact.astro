@@ -1,9 +1,4 @@
 ---
-import { getI18N } from "@/i18n";
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
-const HERO = i18n.HERO;
-
 export interface Props {
   title: string;
   description?: string;
@@ -23,11 +18,5 @@ const { title, description, image } = Astro.props as Props;
     <div class="place-self-center z-10 text-center">
         <h1 class="gradient-text max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">{title}</h1>
         <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{description}</p>
-        <a href="/contacto">
-        <button
-          class="rounded-full uppercase w-72 h-16 m-auto font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110">
-          {HERO.BUTTON}
-        </button>
-        </a>
     </div>
 </section>

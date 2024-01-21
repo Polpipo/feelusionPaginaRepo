@@ -1,29 +1,19 @@
 ---
-import { getCollection } from "astro:content";
 import ContentSection from "@/components/content-section.astro";
-import ShowcaseCard from "@/components/showcase-card.astro";
 import VideoFeelusion from "@/assets/eventos-feelusion/Feelusion_FINAL.mp4";
 
-const featuredSites = await getCollection(
-  "showcase",
-  ({ data }) => "featured" in data
-);
-const orderedSites = featuredSites.sort(
-  (a, b) => a.data.featured! - b.data.featured!
-);
----
+import { getI18N } from "@/i18n";
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const VIDEO_PRESENTACION = i18n.VIDEO_PRESENTACION;
 
+---
 <ContentSection
-  title="¿Por qué nosotros?"
+  title={VIDEO_PRESENTACION.TITLE}
   id="video-presentacion"
   css="md:pt-16"
 >
-  <Fragment slot="lead">
-    <span class="text-md">La gente <span class="text-primary">olvidará</span> lo que <span
-    class="text-primary">dijiste</span
-  >,<br /> pero <span class="text-primary">nunca olvidará</span> cómo le
-  hiciste <span class="text-primary">sentir</span></span>
-  </Fragment>
+  <Fragment slot="lead" set:html={VIDEO_PRESENTACION.DESCRIPTION_1}></Fragment>
   <div class="mt-8 w-full text-center">
     <video
       id="video-feelusion"
@@ -42,8 +32,8 @@ const orderedSites = featuredSites.sort(
       href="https://docs.google.com/forms/d/e/1FAIpQLSfjYNuh1_sX66Bujs5HlaoJSuSMJ6kYkM2xcQqYA91WuP8u6A/viewform"
     >
       <button
-        class="mt-10 rounded-full w-72 h-16 font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
-        >TRABAJA CON NOSOTROS</button
+        class="mt-10 uppercase rounded-full w-72 h-16 font-bold before:ease relative overflow-hidden text-white shadow-[1px_3px_5px_0px_rgba(255,255,255,0.5)] hover:shadow-[0px_0px_10px_2px_rgba(255,255,255,0.5)] transition-all before:absolute before:right-0 before:top-0 before:h-16 before:w-4 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:shadow-yellow-500 hover:before:-translate-x-72 bg-gradient-to-br from-gray-300 via-yellow-400 via-yellow-600 to-yellow-800 hover:scale-110"
+        >{VIDEO_PRESENTACION.BUTTON}</button
       >
     </a>
   </div>
