@@ -1,0 +1,16 @@
+{
+  "titulo": "Evento1",
+  "imagen": "/eventsImages/foto_cara.jpg",
+  "url": "pronhub",
+  "contenido": [
+    {
+      "titulo1": "Que pasa tio 1",
+      "titulo2": "Que pasa tio 2",
+      "descripcion1": "Un burro por tu casa primo 1",
+      "descripcion2": "Un burro por tu casa primo 2",
+      "imagen1": "/eventsImages/foto_cara.jpg",
+      "imagen2": "/eventsImages/foto_cara.jpg",
+      "video": "https://www.youtube.com/watch?v=ffAxT6QFVnM"
+    }
+  ]
+}

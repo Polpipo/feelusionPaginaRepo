@@ -1,0 +1,59 @@
+---
+import { Eventos } from "@/constants/index";
+import Layout from "@/layouts/layout.astro";
+import Header from "@/components/header.astro";
+import Footer from "@/components/footer.astro";
+import Evento from "@/components/evento.astro";
+
+let { url } = Astro
+const pathname = url.pathname
+
+let currentLocale = "es"
+if (pathname.startsWith("/ca/")) {
+  currentLocale = "ca";
+} else if (pathname.startsWith("/en/")) {
+  currentLocale = "en";
+}
+
+// Función para obtener los slugs de los archivos JSON
+export async function getStaticPaths() {
+  // Asegúrate de utilizar 'await' con Astro.glob
+  try {
+    // Intenta obtener los archivos JSON de la carpeta 'talents'
+    const files = await Astro.glob('../../constants/eventos/*.json');
+
+    const paths: { params: { slug: string } }[] = files.map((file: any) => {
+    const slug = file.url;    
+    return {
+      params: { slug },
+    };
+  });
+
+  return paths;
+  } catch (e) {
+    throw new Error(e);
+  }
+  
+}
+
+// Obtiene los datos del talento basado en el slug
+const slug = Astro.params.slug;
+let eventData;
+try {
+  // Intenta importar el archivo JSON basado en el slug
+  eventData = await import(`../../constants/eventos/${slug}.json`);
+} catch (e) {
+  throw new Error(`No se encontró el evento: ${slug}`);
+}
+---
+
+<!-- Aquí puedes usar 'empresa' para mostrar la información específica -->
+
+  <Layout>
+  <Header/>
+  <div class="px-8 pt-36 pb-12 bg-product bg-cover z-10">
+    <Evento titulo={eventData?.titulo} contenido={eventData?.contenido} />
+  </div>
+  <Footer/>
+</Layout>
+  

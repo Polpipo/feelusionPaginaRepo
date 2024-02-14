@@ -15,7 +15,7 @@ export default defineConfig({
         disableIdentityWidgetInjection: true,
         backend: {
           name: 'git-gateway',
-          branch: 'main',
+          branch: 'master',
         },
 
         media_folder: 'public/eventsImages',
