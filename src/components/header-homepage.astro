@@ -1,26 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "@/components/theme-switcher.astro";
+import LanguageSelector from "@/components/language-selector.astro";
+import MenuIcon from "@/components/icons/Menu.astro";
+import CloseIcon from "@/components/icons/Close.astro";
 import type { NavItem } from "@/types";
 import Logo from "@/assets/logo.png";
 import Instagram from "@/assets/Instagram.png";
 
 import { getI18N } from "@/i18n";
-/*
-const url = new URL(Astro.request.url);
-let currentLocale;
 
-if (url.pathname.startsWith('/en/')) {
-    currentLocale = 'en'; // Inglés
-} else if (url.pathname.startsWith('/es/')) {
-    currentLocale = 'es'; // Español
-} else if (url.pathname.startsWith('/ca/')) {
-    currentLocale = 'ca'; // Catalán
-} else {
-    currentLocale = 'es'; // Predeterminado a español, por ejemplo
-}
-*/
 let { url } = Astro
 const pathname = url.pathname
 
@@ -57,6 +46,10 @@ const navItems: Array<NavItem> = [
   <h1 class="sr-only">
     {i18n.SEO_DESCRIPTION}
   </h1>
+  <div class="idiomas hidden md:hidden order-1">
+    <LanguageSelector />
+  </div>
+
   <a
     class="instagram flex items-center gap-3 hover:!text-default flex items-center gap-3 hover:!text-default transition-all transform hover:scale-110 duration-300"
     href="https://www.instagram.com/feelusion.events/"
@@ -74,7 +67,7 @@ const navItems: Array<NavItem> = [
     <p class="text-sm md:text-md">@feelusion.events</p>
   </a>
   <a
-    class="logo hidden flex items-center gap-3 hover:!text-default flex items-center gap-3 hover:!text-default transition-all transform hover:scale-110 duration-300"
+    class="logo hidden order-2 flex items-center gap-3 hover:!text-default flex items-center gap-3 hover:!text-default transition-all transform hover:scale-110 duration-300"
     href="/"
   >
     <!-- <Icon name="logomark" class="h-10" />-->
@@ -87,7 +80,7 @@ const navItems: Array<NavItem> = [
       height="100"
     />
   </a>
-  <div>
+  <div class="order-3">
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
         <ul class="flex items-center gap-12">
@@ -100,6 +93,7 @@ const navItems: Array<NavItem> = [
               </li>
             ))
           }
+          <LanguageSelector />
         </ul>
       </nav>
       <button
@@ -108,7 +102,7 @@ const navItems: Array<NavItem> = [
         class="btn sm:hidden"
         aria-label="Navigation"
       >
-        <Icon pack="mdi" name="menu" class="h-8" />
+      <MenuIcon />
       </button>
       <!-- <ThemeSwitcher /> -->
     </div>
@@ -122,8 +116,8 @@ const navItems: Array<NavItem> = [
               class="btn"
               aria-label="Close navigation"
             >
-              <Icon pack="mdi" name="close" class="h-8" />
-            </button>
+            <CloseIcon/>
+          </button>
           </header>
           <div class="flex justify-center">
             <!--<Icon name="logomark" class="h-16" />-->
@@ -201,9 +195,6 @@ const navItems: Array<NavItem> = [
 
 
 <style>
-  #open-nav-button {
-      display: none;
-  }
   .fixed-header {
     @apply fixed bottom-auto top-0;
     @apply border-default bg-zinc-900 opacity-95 text-default transition-all duration-300;
@@ -213,6 +204,11 @@ const navItems: Array<NavItem> = [
   }
   .fixed-header .logo {
     @apply block;
+  }
+  @media (max-width: 640px) {
+    .fixed-header .idiomas {
+      @apply block;
+    }
   }
   .modal.is-open {
     @apply block;
