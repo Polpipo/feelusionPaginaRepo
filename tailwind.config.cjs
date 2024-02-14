@@ -23,7 +23,7 @@ module.exports = {
         default: "var(--color-border)",
       },
       backgroundImage: {
-        product: "linear-gradient(rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0.95) 10%, rgba(31, 41, 55, 0.95) 20%, rgba(0, 0, 0, 0.95) 80%, rgba(12, 12, 12, 1) 100%), url('/src/assets/bg-image.webp')",
+        product: "linear-gradient(rgba(12, 12, 12, 1) 0%, rgba(0, 0, 0, 0.95) 5%, rgba(31, 41, 55, 0.95) 10%, rgba(0, 0, 0, 0.95) 80%, rgba(12, 12, 12, 1) 100%), url('/src/assets/bg-image.webp')",
         hero: "linear-gradient(rgba(31, 41, 55, 0.3) 0%, rgba(12, 12, 12, .95) 90%, rgba(12, 12, 12, 1) 100%), url('/src/assets/fotoHero.jpeg')",
         team: "url('/src/assets/team/ferreira.png')"
       },
