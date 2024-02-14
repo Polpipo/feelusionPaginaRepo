@@ -8,17 +8,9 @@ const { currentLocale = "es", url } = Astro
 
 const pathname = url.pathname
 
-let restUrl
+const cleanPath = pathname.replace(/^\/(ca|es|en)(\/|$)/, '/');
 
-if (pathname.startsWith("/ca")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
-} else if (pathname.startsWith("/en")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
-} else {
-  restUrl = pathname.replace(/\/+$/, "")
-}
+let restUrl = cleanPath.replace(/\/+$/, "");
 
 const LOCALES: Record<
   string,
@@ -26,19 +18,19 @@ const LOCALES: Record<
 > = {
   ca: {
     code: "ca",
-    href: `/ca${restUrl}`,
+    href: `/ca${restUrl === '/' ? '' : restUrl}`, // Asegura no duplicar '/'
     name: "Català",
     flag: CatalanFlag,
   },
   es: {
     code: "es",
-    href: restUrl,
+    href: `${restUrl}`, // Usa directamente `restUrl` para 'es' porque ya es relativo a la raíz
     name: "Español",
     flag: SpainFlag,
   },
   en: {
     code: "en",
-    href: `/en${restUrl}`,
+    href: `/en${restUrl === '/' ? '' : restUrl}`,
     name: "English",
     flag: EnglishFlag,
   },
@@ -47,8 +39,12 @@ const LOCALES: Record<
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
+
 )
-const currentPath = url.pathname.replace(currentLocaleData.href, "")
+
+console.log(currentLocale)
+console.log(currentLocaleData)
+
 ---
 
 <div class="relative inline-block text-left">
@@ -75,7 +71,7 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "")
           <li class="">
             <a
               class="rounded-md bg-black/30 hover:bg-black/70 text-gray-100 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={`${locale.href}${currentPath}`}
+              href={`${locale.href}`}
             >
               <locale.flag />
               <span class="hidden lg:block">{locale.name}</span>
