@@ -9,7 +9,15 @@ import TimeLine from "@/components/TimeLine/time-line.astro";
 import Footer from "@/components/footer.astro";
 
 import { getI18N } from "@/i18n";
-const { currentLocale } = Astro;
+let { url } = Astro
+const pathname = url.pathname
+
+let currentLocale = "es"
+if (pathname.startsWith("/ca/")) {
+  currentLocale = "ca";
+} else if (pathname.startsWith("/en/")) {
+  currentLocale = "en";
+}
 const i18n = getI18N({ currentLocale });
 const SERVICIO = i18n.SERVICIO;
 ---

@@ -8,7 +8,15 @@ import ContactForm from "@/components/contact-form.tsx";
 import FooterContact from "@/components/footer-contact.astro";
 
 import { getI18N } from "@/i18n";
-const { currentLocale } = Astro;
+let { url } = Astro
+const pathname = url.pathname
+
+let currentLocale = "es"
+if (pathname.startsWith("/ca/")) {
+  currentLocale = "ca";
+} else if (pathname.startsWith("/en/")) {
+  currentLocale = "en";
+}
 const i18n = getI18N({ currentLocale });
 const FORM = i18n.FORM;
 ---

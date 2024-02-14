@@ -4,9 +4,15 @@ import CatalanFlag from "@/components/flags/Catalan.astro"
 import EnglishFlag from "@/components/flags/English.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
 
-const { currentLocale = "es", url } = Astro
-
+let { url } = Astro
 const pathname = url.pathname
+
+let currentLocale = "es"
+if (pathname.startsWith("/ca/")) {
+  currentLocale = "ca";
+} else if (pathname.startsWith("/en/")) {
+  currentLocale = "en";
+}
 
 const cleanPath = pathname.replace(/^\/(ca|es|en)(\/|$)/, '/');
 

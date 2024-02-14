@@ -133,28 +133,28 @@ const Eventos = {
       collection: "Tengo un Plan",
       eventos: [
         { 
-          titulo: "Primer Evento Tengo un Plan", 
+          titulo: "First Event Tengo un Plan", 
           imagen: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           url: "/TengoUnPlan1",
           contenido: {
-            titulo1: "Titulo del evento 1",
-            descripcion1: "Hola 1",
-            titulo2: "Titulo del evento 2",
-            descripcion2: "Hola 2",
+            titulo1: "Title of the event 1",
+            descripcion1: "Hello 1",
+            titulo2: "Title of the event 2",
+            descripcion2: "Hello 2",
             imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             video: "video"
           }
         },
         { 
-          titulo: "Segundo Evento Tengo un Plan", 
+          titulo: "Second Event Tengo un Plan", 
           imagen: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           url: "/TengoUnPlan2",
           contenido: {
-            titulo1: "Titulo del evento 1",
-            descripcion1: "Hola 1",
-            titulo2: "Titulo del evento 2",
-            descripcion2: "Hola 2",
+            titulo1: "Title of the event 1",
+            descripcion1: "Hello 1",
+            titulo2: "Title of the event 2",
+            descripcion2: "Hello 2",
             imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             video: "video"
@@ -167,28 +167,28 @@ const Eventos = {
     collection: "DaviTuru",
     eventos: [
       { 
-        titulo: "Primer Evento DaviTuru", 
+        titulo: "First Event DaviTuru", 
         imagen: "/src/assets/organizaciones/DaviTuru.jpg",
         url: "/DaviTuru1",
         contenido: {
-          titulo1: "Titulo del evento 1",
-          descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
-          descripcion2: "Hola 2",
+          titulo1: "Title of the event 1",
+          descripcion1: "Hello 1",
+          titulo2: "Title of the event 2",
+          descripcion2: "Hello 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           video: "video"
         }
       },
       { 
-        titulo: "Segundo Evento DaviTuru", 
+        titulo: "Second Event DaviTuru", 
         imagen: "/src/assets/organizaciones/DaviTuru.jpg",
         url: "/DaviTuru2",
         contenido: {
-          titulo1: "Titulo del evento 1",
-          descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
-          descripcion2: "Hola 2",
+          titulo1: "Title of the event 1",
+          descripcion1: "Hello 1",
+          titulo2: "Title of the event 2",
+          descripcion2: "Hello 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           video: "video"
@@ -201,14 +201,14 @@ const Eventos = {
     collection: "YoutubExperto",
     eventos: [
       { 
-        titulo: "Primer Evento YoutubExperto", 
+        titulo: "First Event YoutubExperto", 
         imagen: "/src/assets/organizaciones/YoutubExperto.jpg",
         url: "/YoutubExperto1",
         contenido: {
-          titulo1: "Titulo del evento 1",
-          descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
-          descripcion2: "Hola 2",
+          titulo1: "Title of the event 1",
+          descripcion1: "Hello 1",
+          titulo2: "Title of the event 2",
+          descripcion2: "Hello 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           video: "video"
@@ -223,13 +223,13 @@ const Eventos = {
       collection: "Tengo un Plan",
       eventos: [
         { 
-          titulo: "Primer Evento Tengo un Plan", 
+          titulo: "Primer Event Tengo un Plan", 
           imagen: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           url: "/TengoUnPlan1",
           contenido: {
-            titulo1: "Titulo del evento 1",
+            titulo1: "Titol de l'event 1",
             descripcion1: "Hola 1",
-            titulo2: "Titulo del evento 2",
+            titulo2: "Titol de l'event 2",
             descripcion2: "Hola 2",
             imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
@@ -237,13 +237,13 @@ const Eventos = {
           }
         },
         { 
-          titulo: "Segundo Evento Tengo un Plan", 
+          titulo: "Segon Event Tengo un Plan", 
           imagen: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           url: "/TengoUnPlan2",
           contenido: {
-            titulo1: "Titulo del evento 1",
+            titulo1: "Titol de l'event 1",
             descripcion1: "Hola 1",
-            titulo2: "Titulo del evento 2",
+            titulo2: "Titol de l'event 2",
             descripcion2: "Hola 2",
             imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
             imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
@@ -257,13 +257,13 @@ const Eventos = {
     collection: "DaviTuru",
     eventos: [
       { 
-        titulo: "Primer Evento DaviTuru", 
+        titulo: "First Event DaviTuru", 
         imagen: "/src/assets/organizaciones/DaviTuru.jpg",
         url: "/DaviTuru1",
         contenido: {
-          titulo1: "Titulo del evento 1",
+          titulo1: "Titol de l'event 1",
           descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
+          titulo2: "Titol de l'event 2",
           descripcion2: "Hola 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
@@ -271,13 +271,13 @@ const Eventos = {
         }
       },
       { 
-        titulo: "Segundo Evento DaviTuru", 
+        titulo: "Segon Event DaviTuru", 
         imagen: "/src/assets/organizaciones/DaviTuru.jpg",
         url: "/DaviTuru2",
         contenido: {
-          titulo1: "Titulo del evento 1",
+          titulo1: "Titol de l'event 1",
           descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
+          titulo2: "Titol de l'event 2",
           descripcion2: "Hola 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
@@ -291,13 +291,13 @@ const Eventos = {
     collection: "YoutubExperto",
     eventos: [
       { 
-        titulo: "Primer Evento YoutubExperto", 
+        titulo: "Primer Event YoutubExperto", 
         imagen: "/src/assets/organizaciones/YoutubExperto.jpg",
         url: "/YoutubExperto1",
         contenido: {
-          titulo1: "Titulo del evento 1",
+          titulo1: "Titol de l'event 1",
           descripcion1: "Hola 1",
-          titulo2: "Titulo del evento 2",
+          titulo2: "Titol de l'event 2",
           descripcion2: "Hola 2",
           imagen1: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",
           imagen2: "/src/assets/organizaciones/TengoUnPlanLogo.jpg",

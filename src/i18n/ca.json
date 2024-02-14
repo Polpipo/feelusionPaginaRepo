@@ -2,53 +2,53 @@
     "SEO_TITLE": "Feelusion",
     "SEO_DESCRIPTION": "Feelusion, Esdeveniments per a Emprenedors. Creem experiències per connectar amb la teva comunitat",
     "HEADER": {
-        "HEADER_1": "Inici",
-        "HEADER_2": "Sobre Nosaltres",
-        "HEADER_3": "Cases d'èxit",
-        "HEADER_4": "Els nostres esdeveniments",
-        "HEADER_5": "El nostre servei",
-        "HEADER_6": "Contacte"
+    "HEADER_1": "Inici",
+    "HEADER_2": "Sobre Nosaltres",
+    "HEADER_3": "Cases d'èxit",
+    "HEADER_4": "Els nostres esdeveniments",
+    "HEADER_5": "El nostre servei",
+    "HEADER_6": "Contacte"
     },
     "SPLASH": {
-        "DESCRIPTION_1": "Organització i gestió de",
-        "DESCRIPTION_2": "esdeveniments per a emprenedors",
-        "BUTTON": "Programar trucada"
+    "DESCRIPTION_1": "Organització i gestió de",
+    "DESCRIPTION_2": "esdeveniments per a emprenedors",
+    "BUTTON": "Programar trucada"
     },
     "VIDEO_PRESENTACION": {
-        "TITLE": "Per què nosaltres?",
-        "DESCRIPTION_1": "<span class='text-md'>La gent <span class='text-primary'>oblidarà</span> el que <span class='text-primary'>vas dir</span>,<br /> però <span class='text-primary'>mai oblidarà</span> com els vas fer <span class='text-primary'>sentir</span></span>",
-        "BUTTON": "Treballa amb nosaltres"
+    "TITLE": "Per què nosaltres?",
+    "DESCRIPTION_1": "<span class='text-md'>La gent <span class='text-primary'>oblidarà</span> el que <span class='text-primary'>vas dir</span>,<br /> però <span class='text-primary'>mai oblidarà</span> com els vas fer <span class='text-primary'>sentir</span></span>",
+    "BUTTON": "Treballa amb nosaltres"
     },
     "TESTIMONIOS": {
-        "TITLE": "Cases d'èxit",
-        "TITLE_1": "Tinc un pla",
-        "BUTTON_1": "Treballa amb nosaltres",
-        "TITLE_2": "David Tevosyan",
-        "BUTTON_2": "Reserva trucada"
+    "TITLE": "Cases d'èxit",
+    "TITLE_1": "Tinc un pla",
+    "BUTTON_1": "Treballa amb nosaltres",
+    "TITLE_2": "David Tevosyan",
+    "BUTTON_2": "Reserva trucada"
     },
     "NUESTROS_EVENTOS": {
-        "TITLE": "Els nostres esdeveniments",
-        "TITLE_1": "Podcast en directe",
-        "TITLE_2": "Esdeveniments d'alt impacte",
-        "TITLE_3": "Experiències",
-        "BUTTON": "Treballa amb nosaltres"
+    "TITLE": "Els nostres esdeveniments",
+    "TITLE_1": "Podcast en directe",
+    "TITLE_2": "Esdeveniments d'alt impacte",
+    "TITLE_3": "Experiències",
+    "BUTTON": "Treballa amb nosaltres"
     },
     "FEATURES": {
-        "TITLE": "Què esperar del nostre servei?",
-        "DESCRIPTION": "<span class='text-primary'>Despreocupa't</span> de l'organització dels teus esdeveniments. Centra't en el que realment és <span class='text-primary'>important per a la teva comunitat</span>.",
-        "TITLE_1": "Assessorament",
-        "DESCRIPTION_1": "Enfocament completament personalitzat i seguiment continu per cobrir les teves necessitats i desitjos",
-        "TITLE_2": "Coordinació",
-        "DESCRIPTION_2": "Recerca exhaustiva de proveïdors i espais, amb la millor relació qualitat-preu",
-        "TITLE_3": "Estratègia",
-        "DESCRIPTION_3": "Comparativa de preus enfocada sempre en l'opció més òptima segons les teves necessitats",
-        "TITLE_4": "Planificació",
-        "DESCRIPTION_4": "Definició del pla d'acció individualitzat. Proposta de dinàmiques",
-        "TITLE_5": "Branding",
-        "DESCRIPTION_5": "Dissenyem els creatius i branding en general del teu esdeveniment per diferenciar-te dels altres",
-        "TITLE_6": "Execució",
-        "DESCRIPTION_6": "Dirigirem i coordinarem presencialment el teu esdeveniment perquè tot surti segons el planejat",
-        "BUTTON": "Contacta amb nosaltres"
+    "TITLE": "Què esperar del nostre servei?",
+    "DESCRIPTION": "<span class='text-primary'>Despreocupa't</span> de l'organització dels teus esdeveniments. Centra't en el que realment és <span class='text-primary'>important per a la teva comunitat</span>.",
+    "TITLE_1": "Assessorament",
+    "DESCRIPTION_1": "Enfocament completament personalitzat i seguiment continu per cobrir les teves necessitats i desitjos",
+    "TITLE_2": "Coordinació",
+    "DESCRIPTION_2": "Recerca exhaustiva de proveïdors i espais, amb la millor relació qualitat-preu",
+    "TITLE_3": "Estratègia",
+    "DESCRIPTION_3": "Comparativa de preus enfocada sempre en l'opció més òptima segons les teves necessitats",
+    "TITLE_4": "Planificació",
+    "DESCRIPTION_4": "Definició del pla d'acció individualitzat. Proposta de dinàmiques",
+    "TITLE_5": "Branding",
+    "DESCRIPTION_5": "Dissenyem els creatius i el branding en general del teu esdeveniment per diferenciar-te dels altres",
+    "TITLE_6": "Execució",
+    "DESCRIPTION_6": "Dirigirem i coordinarem presencialment el teu esdeveniment perquè tot surti segons el planejat",
+    "BUTTON": "Contacta'ns"
     },
     "TIMELINE": {
         "TITLE": "El pas a pas",
@@ -82,11 +82,11 @@
         "TITLE_HERO": "Contacte",
         "CONTENT_HERO": "No dubtis a preguntar!",
         "TITLE": "Formulari de contacte",
-        "FORM_CONTENT": "Si tens alguna pregunta sobre els nostres productes o serveis, omple el següent formulari i aviat ens posarem en contacte amb tu. També ens pots trucar en horaris d'oficina.",
+        "FORM_CONTENT": "Si tens alguna pregunta sobre els nostres productes o serveis, omple el següent formulari i en breu ens posarem en contacte amb tu. També ens pots trucar en horaris d'oficina.",
         "NAME": "Nom",
         "SURNAME": "Cognoms",
         "EMAIL": "Email",
-        "OPTION": "Un altre",
+        "OPTION": "Altre",
         "TELEPHONE": "Número de Telèfon",
         "MESSAGE": "Missatge",
         "PRIVACY_1": "Acceptes la nostra",
@@ -95,23 +95,31 @@
     },
     "SOBRE_NOSOTROS": {
         "TITLE": "Per què nosaltres?",
-        "DESCRIPTION": "Descobreix les raons per les quals hauries de triar-nos per a l'organització dels teus esdeveniments. Amb nosaltres, la teva comunitat es sentirà més propera que mai.",
-        "REASON_1": "Creativitat",
-        "REASON_1_DESCRIPTION": "Aportem noves idees i conceptes perquè el teu esdeveniment sigui únic i impactant.",
-        "REASON_2": "Professionalitat",
-        "REASON_2_DESCRIPTION": "Gestionem cada detall amb precisió i dedicació per garantir un resultat impecable.",
-        "REASON_3": "Connectivitat",
-        "REASON_3_DESCRIPTION": "Creem experiències significatives que connecten la teva comunitat i generen llaços duradors.",
-        "REASON_4": "Suport Personalitzat",
-        "REASON_4_DESCRIPTION": "Estem al teu costat durant tot el procés, oferint un suport integral i adaptant-nos a les teves necessitats."
+        "DESCRIPTION": "Descobreix com treballem i què podem fer per a tu",
+        "BUTTON": "Treballa amb nosaltres"
     },
-    "CONTACTO": {
-        "TITLE": "Contacta amb nosaltres",
-        "DESCRIPTION": "Estem aquí per respondre a totes les teves preguntes i ajudar-te amb la planificació dels teus esdeveniments. No dubtis a posar-te en contacte amb nosaltres.",
-        "ADDRESS": "Adreça",
-        "EMAIL": "Email",
-        "PHONE": "Telèfon",
-        "FORM_BUTTON": "Ompli el formulari",
-        "CALL_BUTTON": "Programar trucada"
+    "TEAM": {
+        "TITLE": "El nostre equip",
+        "DESCRIPTION": "<span class='text-md'> <span class='text-primary'>Coneix-nos</span></br> molt més <span class='text-primary'>a fons</span></span>"
+    },
+    "INFO_NOSOTROS": {
+        "DESCRIPTION_FERREIRA": "Breu descripció Ferreira. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facilis ipsum reprehenderit iure quia! Accusantium nisi fugit earum fugaut aut dicta.",
+        "DESCRIPTION_SANDRA": "Breu descripció Sandra. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facilis ipsum reprehenderit iure quia! Accusantium nisi fugit earum fugaut aut dicta. ",
+        "BUTTON": "Contacta amb nosaltres"
+    },
+    "CASOS_EXITO": {
+        "TITLE": "Casos d'èxit",
+        "DESCRIPTION": "Emprenedors amb els quals hem treballat"
+    },
+    "SERVICIO": {
+        "TITLE": "El nostre servei",
+        "DESCRIPTION": "Què t'ofereixem?"
+    },
+    "HERO": {
+        "BUTTON": "Contacte"
+    },
+    "EVENTOS": {
+        "TITLE": "Els nostres esdeveniments",
+        "DESCRIPTION": "Empreses amb les quals hem treballat"
     }
 }

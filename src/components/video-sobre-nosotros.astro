@@ -2,7 +2,15 @@
 import VideoFeelusion from "@/assets/eventos-feelusion/Feelusion_FINAL.mp4";
 
 import { getI18N } from "@/i18n";
-const { currentLocale } = Astro;
+let { url } = Astro
+const pathname = url.pathname
+
+let currentLocale = "es"
+if (pathname.startsWith("/ca/")) {
+  currentLocale = "ca";
+} else if (pathname.startsWith("/en/")) {
+  currentLocale = "en";
+}
 const i18n = getI18N({ currentLocale });
 const VIDEO_SOBRE_NOSOTROS = i18n.VIDEO_PRESENTACION;
 
